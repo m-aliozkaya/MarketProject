@@ -29,43 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.txt_ID = new System.Windows.Forms.TextBox();
-            this.txt_sifre = new System.Windows.Forms.TextBox();
+            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.btn_login = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_ID
+            // txt_user
             // 
-            this.txt_ID.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_ID.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txt_ID.Location = new System.Drawing.Point(145, 380);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(352, 41);
-            this.txt_ID.TabIndex = 2;
-            this.txt_ID.TextChanged += new System.EventHandler(this.txt_ID_TextChanged);
+            this.txt_user.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_user.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txt_user.Location = new System.Drawing.Point(145, 380);
+            this.txt_user.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(352, 41);
+            this.txt_user.TabIndex = 2;
             // 
-            // txt_sifre
+            // txt_password
             // 
-            this.txt_sifre.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_sifre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_sifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_sifre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txt_sifre.Location = new System.Drawing.Point(145, 484);
-            this.txt_sifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_sifre.Name = "txt_sifre";
-            this.txt_sifre.Size = new System.Drawing.Size(352, 41);
-            this.txt_sifre.TabIndex = 3;
-            this.txt_sifre.TextChanged += new System.EventHandler(this.txt_sifre_TextChanged);
+            this.txt_password.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_password.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txt_password.Location = new System.Drawing.Point(145, 484);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(352, 41);
+            this.txt_password.TabIndex = 3;
             // 
             // pictureBox2
             // 
@@ -77,7 +74,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -90,10 +86,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -105,27 +97,26 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
-            // button_WOC1
+            // btn_login
             // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.Black;
-            this.button_WOC1.FlatAppearance.BorderSize = 0;
-            this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button_WOC1.Location = new System.Drawing.Point(201, 602);
-            this.button_WOC1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
-            this.button_WOC1.Size = new System.Drawing.Size(209, 84);
-            this.button_WOC1.TabIndex = 8;
-            this.button_WOC1.Text = "Giriş";
-            this.button_WOC1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
-            this.button_WOC1.UseVisualStyleBackColor = true;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
+            this.btn_login.BorderColor = System.Drawing.Color.Black;
+            this.btn_login.ButtonColor = System.Drawing.Color.Black;
+            this.btn_login.FlatAppearance.BorderSize = 0;
+            this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_login.Location = new System.Drawing.Point(201, 602);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btn_login.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_login.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
+            this.btn_login.Size = new System.Drawing.Size(209, 84);
+            this.btn_login.TabIndex = 8;
+            this.btn_login.Text = "Giriş";
+            this.btn_login.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
+            this.btn_login.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -134,9 +125,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(600, 773);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button_WOC1);
-            this.Controls.Add(this.txt_sifre);
-            this.Controls.Add(this.txt_ID);
+            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_user);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.MenuText;
@@ -156,12 +147,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_ID;
-        private System.Windows.Forms.TextBox txt_sifre;
+        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
+        private ePOSOne.btnProduct.Button_WOC btn_login;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

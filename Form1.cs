@@ -16,40 +16,5 @@ namespace MarketProject
         {
             InitializeComponent();
         }
-
-        private void txt_ID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_sifre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void btn_giris_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_WOC1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
