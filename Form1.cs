@@ -16,5 +16,10 @@ namespace MarketProject
         {
             InitializeComponent();
         }
+
+        private void txt_ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
