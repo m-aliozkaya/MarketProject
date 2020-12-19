@@ -36,5 +36,10 @@ namespace MarketProject
         {
 
         }
+
+        private void btn_giris_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
