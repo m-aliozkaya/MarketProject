@@ -64,6 +64,7 @@
             this.txt_password.Size = new System.Drawing.Size(352, 41);
             this.txt_password.TabIndex = 3;
             this.txt_password.UseSystemPasswordChar = true;
+            this.txt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter);
             // 
             // pictureBox2
             // 
@@ -97,6 +98,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // btn_login
             // 
@@ -118,6 +120,7 @@
             this.btn_login.Text = "Giriş";
             this.btn_login.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
             this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // Form1
             // 

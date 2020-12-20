@@ -61,5 +61,22 @@ namespace MarketProject
         {
 
         }
+
+        private void labelHover(object sender, EventArgs e)
+        {
+                var label = (Label)sender;
+                label.ForeColor = Color.White;    
+        }
+
+        private void labelLeave(object sender, EventArgs e)
+        {
+            var label = (Label)sender;
+            label.ForeColor = Color.FromArgb(29, 53, 87);
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
