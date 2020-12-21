@@ -229,10 +229,10 @@ namespace MarketProject
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel2.Location = new System.Drawing.Point(410, -5);
+            this.panel2.Location = new System.Drawing.Point(410, -1);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(868, 756);
+            this.panel2.Size = new System.Drawing.Size(868, 735);
             this.panel2.TabIndex = 1;
             // 
             // Form2
@@ -242,8 +242,12 @@ namespace MarketProject
             this.ClientSize = new System.Drawing.Size(1280, 734);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
