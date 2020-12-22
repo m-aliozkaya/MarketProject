@@ -1,7 +1,7 @@
 ﻿
 namespace MarketProject
 {
-    partial class Form2
+    partial class FormHome
     {
         /// <summary>
         /// Required designer variable.

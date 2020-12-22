@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MarketProject
 {
-    public partial class Form2 : Form
+    public partial class FormHome : Form
     {
-        public Form2()
+        public FormHome()
         {
             InitializeComponent();
         }

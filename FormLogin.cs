@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace MarketProject
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
 
         string user = "admin";
         string password = "123456";
 
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace MarketProject
             if(txt_user.Text == user && txt_password.Text == password)
             {
                 this.Hide();
-                Form2 form2 = new Form2();
+                FormHome form2 = new FormHome();
                 form2.Show();
             } else
             {
