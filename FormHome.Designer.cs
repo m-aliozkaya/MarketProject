@@ -172,6 +172,7 @@ namespace MarketProject
             this.listMarket.Size = new System.Drawing.Size(197, 29);
             this.listMarket.TabIndex = 5;
             this.listMarket.Text = "Marketleri Listele";
+            this.listMarket.Click += new System.EventHandler(this.listMarket_Click);
             this.listMarket.MouseLeave += new System.EventHandler(this.labelLeave);
             this.listMarket.MouseHover += new System.EventHandler(this.labelHover);
             // 
@@ -184,6 +185,7 @@ namespace MarketProject
             this.addMarket.Size = new System.Drawing.Size(140, 29);
             this.addMarket.TabIndex = 4;
             this.addMarket.Text = "Market Ekle";
+            this.addMarket.Click += new System.EventHandler(this.addMarket_Click);
             this.addMarket.MouseLeave += new System.EventHandler(this.labelLeave);
             this.addMarket.MouseHover += new System.EventHandler(this.labelHover);
             // 
@@ -223,7 +225,7 @@ namespace MarketProject
             this.panel2.Location = new System.Drawing.Point(410, -1);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(868, 735);
+            this.panel2.Size = new System.Drawing.Size(872, 735);
             this.panel2.TabIndex = 1;
             // 
             // FormHome

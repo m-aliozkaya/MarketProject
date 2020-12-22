@@ -38,5 +38,20 @@ namespace MarketProject
         {
             Application.Exit();
         }
+
+        private void addMarket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listMarket_Click(object sender, EventArgs e)
+        {
+            FormListMarket formListMarket = new FormListMarket();
+            formListMarket.TopLevel = false;
+            panel2.Controls.Add(formListMarket);
+            formListMarket.Dock = DockStyle.Fill;
+            formListMarket.Show();
+
+        }
     }
 }
