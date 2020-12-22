@@ -49,6 +49,18 @@
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormAddList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddList.Designer.cs">
+      <DependentUpon>FormAddList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListMarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListMarket.Designer.cs">
+      <DependentUpon>FormListMarket.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
