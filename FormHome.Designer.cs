@@ -32,14 +32,14 @@ namespace MarketProject
             this.market = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.listSupplier = new System.Windows.Forms.Label();
+            this.addSupplier = new System.Windows.Forms.Label();
+            this.listEmployee = new System.Windows.Forms.Label();
+            this.addEmployee = new System.Windows.Forms.Label();
+            this.listProduct = new System.Windows.Forms.Label();
+            this.addProduct = new System.Windows.Forms.Label();
+            this.listMarket = new System.Windows.Forms.Label();
+            this.addMarket = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,20 +56,19 @@ namespace MarketProject
             this.market.Size = new System.Drawing.Size(161, 45);
             this.market.TabIndex = 0;
             this.market.Text = "Market";
-            this.market.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.listSupplier);
+            this.panel1.Controls.Add(this.addSupplier);
+            this.panel1.Controls.Add(this.listEmployee);
+            this.panel1.Controls.Add(this.addEmployee);
+            this.panel1.Controls.Add(this.listProduct);
+            this.panel1.Controls.Add(this.addProduct);
+            this.panel1.Controls.Add(this.listMarket);
+            this.panel1.Controls.Add(this.addMarket);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -80,7 +79,6 @@ namespace MarketProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(413, 739);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label12
             // 
@@ -93,107 +91,101 @@ namespace MarketProject
             this.label12.TabIndex = 12;
             this.label12.Text = "Admin Paneli";
             // 
-            // label11
+            // listSupplier
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(52, 671);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(225, 29);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Tedarikçileri Listele";
-            this.label11.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label11.MouseHover += new System.EventHandler(this.labelHover);
+            this.listSupplier.AutoSize = true;
+            this.listSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listSupplier.Location = new System.Drawing.Point(52, 671);
+            this.listSupplier.Name = "listSupplier";
+            this.listSupplier.Size = new System.Drawing.Size(225, 29);
+            this.listSupplier.TabIndex = 11;
+            this.listSupplier.Text = "Tedarikçileri Listele";
+            this.listSupplier.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.listSupplier.MouseHover += new System.EventHandler(this.labelHover);
             // 
-            // label10
+            // addSupplier
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(52, 640);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 29);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Tedarikçi Ekle";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            this.label10.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label10.MouseHover += new System.EventHandler(this.labelHover);
+            this.addSupplier.AutoSize = true;
+            this.addSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addSupplier.Location = new System.Drawing.Point(52, 640);
+            this.addSupplier.Name = "addSupplier";
+            this.addSupplier.Size = new System.Drawing.Size(168, 29);
+            this.addSupplier.TabIndex = 10;
+            this.addSupplier.Text = "Tedarikçi Ekle";
+            this.addSupplier.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.addSupplier.MouseHover += new System.EventHandler(this.labelHover);
             // 
-            // label9
+            // listEmployee
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(52, 510);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(170, 29);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Çalışan Listele";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            this.label9.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label9.MouseHover += new System.EventHandler(this.labelHover);
+            this.listEmployee.AutoSize = true;
+            this.listEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listEmployee.Location = new System.Drawing.Point(52, 510);
+            this.listEmployee.Name = "listEmployee";
+            this.listEmployee.Size = new System.Drawing.Size(170, 29);
+            this.listEmployee.TabIndex = 9;
+            this.listEmployee.Text = "Çalışan Listele";
+            this.listEmployee.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.listEmployee.MouseHover += new System.EventHandler(this.labelHover);
             // 
-            // label8
+            // addEmployee
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(52, 479);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(147, 29);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Çalışan Ekle";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            this.label8.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label8.MouseHover += new System.EventHandler(this.labelHover);
+            this.addEmployee.AutoSize = true;
+            this.addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addEmployee.Location = new System.Drawing.Point(52, 479);
+            this.addEmployee.Name = "addEmployee";
+            this.addEmployee.Size = new System.Drawing.Size(147, 29);
+            this.addEmployee.TabIndex = 8;
+            this.addEmployee.Text = "Çalışan Ekle";
+            this.addEmployee.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.addEmployee.MouseHover += new System.EventHandler(this.labelHover);
             // 
-            // label7
+            // listProduct
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(52, 365);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(175, 29);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Ürünleri Listele";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            this.label7.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label7.MouseHover += new System.EventHandler(this.labelHover);
+            this.listProduct.AutoSize = true;
+            this.listProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listProduct.Location = new System.Drawing.Point(52, 365);
+            this.listProduct.Name = "listProduct";
+            this.listProduct.Size = new System.Drawing.Size(175, 29);
+            this.listProduct.TabIndex = 7;
+            this.listProduct.Text = "Ürünleri Listele";
+            this.listProduct.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.listProduct.MouseHover += new System.EventHandler(this.labelHover);
             // 
-            // label6
+            // addProduct
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(52, 334);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 29);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ürün Ekle";
-            this.label6.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label6.MouseHover += new System.EventHandler(this.labelHover);
+            this.addProduct.AutoSize = true;
+            this.addProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addProduct.Location = new System.Drawing.Point(52, 334);
+            this.addProduct.Name = "addProduct";
+            this.addProduct.Size = new System.Drawing.Size(118, 29);
+            this.addProduct.TabIndex = 6;
+            this.addProduct.Text = "Ürün Ekle";
+            this.addProduct.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.addProduct.MouseHover += new System.EventHandler(this.labelHover);
             // 
-            // label5
+            // listMarket
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(52, 225);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(197, 29);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Marketleri Listele";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label5.MouseHover += new System.EventHandler(this.labelHover);
+            this.listMarket.AutoSize = true;
+            this.listMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listMarket.Location = new System.Drawing.Point(52, 225);
+            this.listMarket.Name = "listMarket";
+            this.listMarket.Size = new System.Drawing.Size(197, 29);
+            this.listMarket.TabIndex = 5;
+            this.listMarket.Text = "Marketleri Listele";
+            this.listMarket.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.listMarket.MouseHover += new System.EventHandler(this.labelHover);
             // 
-            // label4
+            // addMarket
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(52, 194);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Market Ekle";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseLeave += new System.EventHandler(this.labelLeave);
-            this.label4.MouseHover += new System.EventHandler(this.labelHover);
+            this.addMarket.AutoSize = true;
+            this.addMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addMarket.Location = new System.Drawing.Point(52, 194);
+            this.addMarket.Name = "addMarket";
+            this.addMarket.Size = new System.Drawing.Size(140, 29);
+            this.addMarket.TabIndex = 4;
+            this.addMarket.Text = "Market Ekle";
+            this.addMarket.MouseLeave += new System.EventHandler(this.labelLeave);
+            this.addMarket.MouseHover += new System.EventHandler(this.labelHover);
             // 
             // label3
             // 
@@ -224,7 +216,6 @@ namespace MarketProject
             this.label1.Size = new System.Drawing.Size(128, 64);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ürün";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panel2
             // 
@@ -235,7 +226,7 @@ namespace MarketProject
             this.panel2.Size = new System.Drawing.Size(868, 735);
             this.panel2.TabIndex = 1;
             // 
-            // Form2
+            // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,9 +237,10 @@ namespace MarketProject
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
+            this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHome_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -260,17 +252,17 @@ namespace MarketProject
 
         private System.Windows.Forms.Label market;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label listProduct;
+        private System.Windows.Forms.Label addProduct;
+        private System.Windows.Forms.Label listMarket;
+        private System.Windows.Forms.Label addMarket;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label listSupplier;
+        private System.Windows.Forms.Label addSupplier;
+        private System.Windows.Forms.Label listEmployee;
+        private System.Windows.Forms.Label addEmployee;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel2;
     }
