@@ -50,28 +50,36 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class.cs" />
-    <Compile Include="FormAddList.cs">
+    <Compile Include="Entities\Cashier.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Freeday.cs" />
+    <Compile Include="Entities\HalfManager.cs" />
+    <Compile Include="Entities\Manager.cs" />
+    <Compile Include="Entities\Market.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Supplier.cs" />
+    <Compile Include="Forms\FormAddList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddList.Designer.cs">
+    <Compile Include="Forms\FormAddList.Designer.cs">
       <DependentUpon>FormAddList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormListMarket.cs">
+    <Compile Include="Forms\FormListMarket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormListMarket.Designer.cs">
+    <Compile Include="Forms\FormListMarket.Designer.cs">
       <DependentUpon>FormListMarket.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHome.cs">
+    <Compile Include="Forms\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHome.Designer.cs">
+    <Compile Include="Forms\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
     <Compile Include="MarketProjectDataSet.Designer.cs">
@@ -81,13 +89,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormListMarket.resx">
+    <Compile Include="Utilities\Database.cs" />
+    <Compile Include="Utilities\Login.cs" />
+    <EmbeddedResource Include="Forms\FormListMarket.resx">
       <DependentUpon>FormListMarket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHome.resx">
+    <EmbeddedResource Include="Forms\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

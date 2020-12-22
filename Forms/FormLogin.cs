@@ -13,9 +13,6 @@ namespace MarketProject
     public partial class FormLogin : Form
     {
 
-        string user = "admin";
-        string password = "123456";
-
         public FormLogin()
         {
             InitializeComponent();
@@ -23,7 +20,8 @@ namespace MarketProject
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if(txt_user.Text == user && txt_password.Text == password)
+
+            if (Login.login(txt_user.Text, txt_password.Text))
             {
                 this.Hide();
                 FormHome form2 = new FormHome();
