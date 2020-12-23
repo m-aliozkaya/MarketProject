@@ -5,6 +5,10 @@
         public int employeeID { get; set; }
         public int employeeAdress { get; set; }
         public int employeeName { get; set; }
-        public Freeday freeday { get; set; }
+        public double employeeSalary { get; set; }
+        public string dailyHoliday { get; set; }
+        public int yearlyHoliday { get; set; }
+        public int hiringDate { get; set; }
+
     }
 }

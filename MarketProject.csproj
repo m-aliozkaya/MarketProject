@@ -52,7 +52,6 @@
     <Compile Include="Class.cs" />
     <Compile Include="Entities\Cashier.cs" />
     <Compile Include="Entities\Employee.cs" />
-    <Compile Include="Entities\Freeday.cs" />
     <Compile Include="Entities\HalfManager.cs" />
     <Compile Include="Entities\Manager.cs" />
     <Compile Include="Entities\Market.cs" />
