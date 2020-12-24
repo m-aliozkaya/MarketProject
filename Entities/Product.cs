@@ -9,9 +9,16 @@ namespace MarketProject
     public class Product
     {
         public int productID { get; set; }
-        public int productName { get; set; }
-        public int productPrice { get; set; }
+        public string productName { get; set; }
+        public double productPrice { get; set; }
         public Supplier supplier { get; set; }
         public Market market { get; set; }
+
+        public Product(int productID, string productName, double productPrice)
+        {
+            this.productID = productID;
+            this.productName = productName;
+            this.productPrice = productPrice;
+        }
     }
 }

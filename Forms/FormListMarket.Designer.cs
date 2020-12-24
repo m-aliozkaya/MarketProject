@@ -29,89 +29,74 @@ namespace MarketProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.marketProjectDataSet = new MarketProject.MarketProjectDataSet();
-            this.marketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marketTableAdapter = new MarketProject.MarketProjectDataSetTableAdapters.MarketTableAdapter();
-            this.marketIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marketNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marketAdresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marketProjectDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeight = 34;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.marketIDDataGridViewTextBoxColumn,
-            this.marketNameDataGridViewTextBoxColumn,
-            this.marketAdresDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.marketBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 179);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(846, 679);
+            this.dataGridView1.Size = new System.Drawing.Size(407, 421);
             this.dataGridView1.TabIndex = 0;
             // 
-            // marketProjectDataSet
+            // dataGridView2
             // 
-            this.marketProjectDataSet.DataSetName = "MarketProjectDataSet";
-            this.marketProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(427, 179);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(407, 421);
+            this.dataGridView2.TabIndex = 1;
             // 
-            // marketBindingSource
+            // comboBox1
             // 
-            this.marketBindingSource.DataMember = "Market";
-            this.marketBindingSource.DataSource = this.marketProjectDataSet;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(38, 106);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(607, 37);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // marketTableAdapter
+            // button_WOC1
             // 
-            this.marketTableAdapter.ClearBeforeFill = true;
-            // 
-            // marketIDDataGridViewTextBoxColumn
-            // 
-            this.marketIDDataGridViewTextBoxColumn.DataPropertyName = "marketID";
-            this.marketIDDataGridViewTextBoxColumn.HeaderText = "marketID";
-            this.marketIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.marketIDDataGridViewTextBoxColumn.Name = "marketIDDataGridViewTextBoxColumn";
-            // 
-            // marketNameDataGridViewTextBoxColumn
-            // 
-            this.marketNameDataGridViewTextBoxColumn.DataPropertyName = "marketName";
-            this.marketNameDataGridViewTextBoxColumn.HeaderText = "marketName";
-            this.marketNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.marketNameDataGridViewTextBoxColumn.Name = "marketNameDataGridViewTextBoxColumn";
-            // 
-            // marketAdresDataGridViewTextBoxColumn
-            // 
-            this.marketAdresDataGridViewTextBoxColumn.DataPropertyName = "marketAdres";
-            this.marketAdresDataGridViewTextBoxColumn.HeaderText = "marketAdres";
-            this.marketAdresDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.marketAdresDataGridViewTextBoxColumn.Name = "marketAdresDataGridViewTextBoxColumn";
+            this.button_WOC1.BorderColor = System.Drawing.Color.Silver;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.Red;
+            this.button_WOC1.Location = new System.Drawing.Point(681, 106);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.button_WOC1.Size = new System.Drawing.Size(133, 40);
+            this.button_WOC1.TabIndex = 3;
+            this.button_WOC1.Text = "button_WOC1";
+            this.button_WOC1.TextColor = System.Drawing.Color.White;
+            this.button_WOC1.UseVisualStyleBackColor = true;
             // 
             // FormListMarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 679);
+            this.Controls.Add(this.button_WOC1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListMarket";
             this.Text = "FormListMarket";
             this.Load += new System.EventHandler(this.FormListMarket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marketProjectDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,11 +104,8 @@ namespace MarketProject
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private MarketProjectDataSet marketProjectDataSet;
-        private System.Windows.Forms.BindingSource marketBindingSource;
-        private MarketProjectDataSetTableAdapters.MarketTableAdapter marketTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marketIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marketNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marketAdresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private ePOSOne.btnProduct.Button_WOC button_WOC1;
     }
 }
