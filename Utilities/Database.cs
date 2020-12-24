@@ -9,7 +9,7 @@ namespace MarketProject
 {
     class Database
     {
-        private static string connectionString = "Data Source=LAPTOP-58UAF8UG;Initial Catalog=MarketProject;Integrated Security=True";
+        private static string connectionString = "Data Source=localhost;Initial Catalog=MarketProject;Integrated Security=True";
 
         public static SqlConnection getConnection()
         {
