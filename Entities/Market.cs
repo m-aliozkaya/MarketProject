@@ -17,6 +17,12 @@ namespace MarketProject
             this.marketAdress = marketAdress;
         }
 
+        public Market(string marketName, string marketAdress)
+        {
+            this.marketName = marketName;
+            this.marketAdress = marketAdress;
+        }
+
         public override string ToString()
         {
             return $"{this.marketName, -20} {this.marketAdress, 20} :Adres";

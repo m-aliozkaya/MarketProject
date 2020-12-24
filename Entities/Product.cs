@@ -20,5 +20,10 @@ namespace MarketProject
             this.productName = productName;
             this.productPrice = productPrice;
         }
+
+        public override string ToString()
+        {
+            return $"{this.productName,-20} {this.productPrice,20} :Price";
+        }
     }
 }

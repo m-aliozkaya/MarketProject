@@ -21,7 +21,6 @@ namespace MarketProject
             {
                 string query = $"SELECT * from {tableName} where {userColumn} = '{userName}' AND {passwordColumn} = '{password}'";
                 SqlCommand command = new SqlCommand(query, connection);
-              
                 try
                 {
                     command.Connection.Open();

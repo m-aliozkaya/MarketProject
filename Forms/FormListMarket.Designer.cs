@@ -31,8 +31,7 @@ namespace MarketProject
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.cmbBoxMarkets = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -57,38 +56,22 @@ namespace MarketProject
             this.dataGridView2.Size = new System.Drawing.Size(407, 421);
             this.dataGridView2.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbBoxMarkets
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(38, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(607, 37);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // button_WOC1
-            // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Silver;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.Red;
-            this.button_WOC1.Location = new System.Drawing.Point(681, 106);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.button_WOC1.Size = new System.Drawing.Size(133, 40);
-            this.button_WOC1.TabIndex = 3;
-            this.button_WOC1.Text = "button_WOC1";
-            this.button_WOC1.TextColor = System.Drawing.Color.White;
-            this.button_WOC1.UseVisualStyleBackColor = true;
+            this.cmbBoxMarkets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbBoxMarkets.FormattingEnabled = true;
+            this.cmbBoxMarkets.Location = new System.Drawing.Point(12, 106);
+            this.cmbBoxMarkets.Name = "cmbBoxMarkets";
+            this.cmbBoxMarkets.Size = new System.Drawing.Size(822, 37);
+            this.cmbBoxMarkets.TabIndex = 2;
+            this.cmbBoxMarkets.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMarkets_SelectedIndexChanged);
             // 
             // FormListMarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 679);
-            this.Controls.Add(this.button_WOC1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbBoxMarkets);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -105,7 +88,6 @@ namespace MarketProject
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
+        private System.Windows.Forms.ComboBox cmbBoxMarkets;
     }
 }

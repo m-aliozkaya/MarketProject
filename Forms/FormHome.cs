@@ -41,11 +41,17 @@ namespace MarketProject
 
         private void addMarket_Click(object sender, EventArgs e)
         {
-
+            panel2.Controls.Clear();
+            FormAddMarket formAddMarket = new FormAddMarket();
+            formAddMarket.TopLevel = false;
+            panel2.Controls.Add(formAddMarket);
+            formAddMarket.Dock = DockStyle.Fill;
+            formAddMarket.Show();
         }
 
         private void listMarket_Click(object sender, EventArgs e)
         {
+            panel2.Controls.Clear();
             FormListMarket formListMarket = new FormListMarket();
             formListMarket.TopLevel = false;
             panel2.Controls.Add(formListMarket);

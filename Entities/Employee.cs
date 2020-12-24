@@ -3,12 +3,24 @@
     public class Employee
     {
         public int employeeID { get; set; }
-        public int employeeAdress { get; set; }
-        public int employeeName { get; set; }
+        public string employeeAdress { get; set; }
+        public string employeeName { get; set; }
         public double employeeSalary { get; set; }
         public string dailyHoliday { get; set; }
         public int yearlyHoliday { get; set; }
         public int hiringDate { get; set; }
+
+        public Employee(string employeeName, string employeeAdress, double employeeSalary, int yearlyHoliday)
+        {
+            this.employeeName = employeeName;
+            this.employeeAdress = employeeAdress;
+            this.employeeSalary = employeeSalary;
+            this.yearlyHoliday = yearlyHoliday;
+        }
+        public Employee()
+        {
+
+        }
 
     }
 }

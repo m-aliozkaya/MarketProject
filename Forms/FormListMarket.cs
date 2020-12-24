@@ -13,7 +13,7 @@ namespace MarketProject
 {
     public partial class FormListMarket : Form
     {
-        private List<Market> marketList = new List<Market>();
+        private List<Market> marketList;
 
         public FormListMarket()
         {
@@ -22,96 +22,28 @@ namespace MarketProject
 
         private void FormListMarket_Load(object sender, EventArgs e)
         {
-
-            string tableName = "Market";
-
-            using (SqlConnection connection = Database.getConnection())
-            {
-                string query = $"SELECT * from {tableName}";
-                SqlCommand command = new SqlCommand(query, connection);
-
-                try
-                {
-                    command.Connection.Open();
-
-                    using (SqlDataReader dr = command.ExecuteReader())
-
-                    {
-                        while (dr.Read())
-                        {
-                            Market market = new Market(
-                               (int)dr["marketId"]
-                                , (string)dr["marketName"]
-                                , (string)dr["marketAdres"]
-                                );
-                            marketList.Add(market);
-                        }
-                    }
-
-                }
-                catch (SqlException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-
-            }
+           marketList = MarketManager.GetMarkets();
 
             foreach (Market market in marketList)
             {
-                comboBox1.Items.Add(market.ToString());
+                cmbBoxMarkets.Items.Add(market);
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void cmbBoxMarkets_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            Market selectedMarket = marketList[comboBox1.SelectedIndex];
-            List<Product> productList = new List<Product>();
+            Market selectedMarket = marketList[cmbBoxMarkets.SelectedIndex];
 
-            string tableName = "Product";
-
-            using (SqlConnection connection = Database.getConnection())
-            {
-                string query = $"SELECT * from {tableName} where marketID = {selectedMarket.marketID}";
-                SqlCommand command = new SqlCommand(query, connection);
-
-                try
-                {
-                    command.Connection.Open();
-
-                    using (SqlDataReader dr = command.ExecuteReader())
-
-                    {
-                        while (dr.Read())
-                        {
-                            Product product = new Product(
-                               (int)dr["productID"]
-                                , (string)dr["productName"]
-                                , (double)dr["productPrice"]
-                                );
-                            productList.Add(product);
-                        }
-
-                        selectedMarket.productList = productList;
-                    }
-
-                }
-                catch (SqlException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-
-            }
+            selectedMarket.productList = ProductManager.selectProducts(selectedMarket);
+            selectedMarket.employeeList = EmployeeManager.selectEmployees(selectedMarket);
 
             dataGridView1.DataSource = selectedMarket.productList;
+            dataGridView1.Columns["supplier"].Visible = false;
+            dataGridView1.Columns["market"].Visible = false;
+
+            dataGridView2.DataSource = selectedMarket.employeeList;
         }
     }
 }
