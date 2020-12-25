@@ -29,40 +29,40 @@ namespace MarketProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataProduct = new System.Windows.Forms.DataGridView();
+            this.dataEmployee = new System.Windows.Forms.DataGridView();
             this.cmbBoxMarkets = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmployee)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataProduct
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 179);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(407, 421);
-            this.dataGridView1.TabIndex = 0;
+            this.dataProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataProduct.Location = new System.Drawing.Point(71, 83);
+            this.dataProduct.Name = "dataProduct";
+            this.dataProduct.RowHeadersWidth = 62;
+            this.dataProduct.RowTemplate.Height = 28;
+            this.dataProduct.Size = new System.Drawing.Size(705, 258);
+            this.dataProduct.TabIndex = 0;
             // 
-            // dataGridView2
+            // dataEmployee
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(427, 179);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(407, 421);
-            this.dataGridView2.TabIndex = 1;
+            this.dataEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataEmployee.Location = new System.Drawing.Point(71, 384);
+            this.dataEmployee.Name = "dataEmployee";
+            this.dataEmployee.RowHeadersWidth = 62;
+            this.dataEmployee.RowTemplate.Height = 28;
+            this.dataEmployee.Size = new System.Drawing.Size(705, 258);
+            this.dataEmployee.TabIndex = 1;
             // 
             // cmbBoxMarkets
             // 
             this.cmbBoxMarkets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbBoxMarkets.FormattingEnabled = true;
-            this.cmbBoxMarkets.Location = new System.Drawing.Point(12, 106);
+            this.cmbBoxMarkets.Location = new System.Drawing.Point(143, 12);
             this.cmbBoxMarkets.Name = "cmbBoxMarkets";
-            this.cmbBoxMarkets.Size = new System.Drawing.Size(822, 37);
+            this.cmbBoxMarkets.Size = new System.Drawing.Size(580, 37);
             this.cmbBoxMarkets.TabIndex = 2;
             this.cmbBoxMarkets.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMarkets_SelectedIndexChanged);
             // 
@@ -72,22 +72,22 @@ namespace MarketProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 679);
             this.Controls.Add(this.cmbBoxMarkets);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataEmployee);
+            this.Controls.Add(this.dataProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListMarket";
             this.Text = "FormListMarket";
             this.Load += new System.EventHandler(this.FormListMarket_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmployee)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataProduct;
+        private System.Windows.Forms.DataGridView dataEmployee;
         private System.Windows.Forms.ComboBox cmbBoxMarkets;
     }
 }

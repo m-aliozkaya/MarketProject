@@ -21,10 +21,11 @@ namespace MarketProject
             this.productPrice = productPrice;
         }
 
-        public Product( string productName, double productPrice)
+        public Product(string productName, double productPrice, Market market)
         {
             this.productName = productName;
             this.productPrice = productPrice;
+            this.market = market;
         }
 
         public override string ToString()

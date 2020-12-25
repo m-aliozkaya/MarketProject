@@ -12,6 +12,8 @@ namespace MarketProject.Forms
 {
     public partial class FormAddProduct : Form
     {
+        private List<Market> marketList;
+
         public FormAddProduct()
         {
             InitializeComponent();
@@ -20,7 +22,12 @@ namespace MarketProject.Forms
 
         private void FormAddProduct_Load(object sender, EventArgs e)
         {
-            
+            marketList = MarketManager.GetMarkets();
+
+            foreach (Market market in marketList)
+            {
+                cmbBoxMarket.Items.Add(market.marketName);
+            }
         }
 
 
@@ -29,9 +36,12 @@ namespace MarketProject.Forms
            
             string productName = txtproductName.Text;
             double productPrice = Convert.ToDouble(txtproductPrice.Text);
+            Market market = marketList[cmbBoxMarket.SelectedIndex];
 
             // kraicim ID yi halleder
-            Product product = new Product(productName,productPrice);
+            Product product = new Product(productName,productPrice, market);
+
+            ProductManager.addProduct(product, market);
            
         }
 

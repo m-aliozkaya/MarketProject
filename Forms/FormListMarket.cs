@@ -28,6 +28,8 @@ namespace MarketProject
             {
                 cmbBoxMarkets.Items.Add(market);
             }
+
+            cmbBoxMarkets.SelectedIndex = 0;
         }
 
 
@@ -39,11 +41,11 @@ namespace MarketProject
             selectedMarket.productList = ProductManager.selectProducts(selectedMarket);
             selectedMarket.employeeList = EmployeeManager.selectEmployees(selectedMarket);
 
-            dataGridView1.DataSource = selectedMarket.productList;
-            dataGridView1.Columns["supplier"].Visible = false;
-            dataGridView1.Columns["market"].Visible = false;
+            dataProduct.DataSource = selectedMarket.productList;
+            dataProduct.Columns["supplier"].Visible = false;
+            dataProduct.Columns["market"].Visible = false;
 
-            dataGridView2.DataSource = selectedMarket.employeeList;
+            dataEmployee.DataSource = selectedMarket.employeeList;
         }
     }
 }
