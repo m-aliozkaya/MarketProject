@@ -63,6 +63,12 @@
     <Compile Include="Forms\FormAddMarket.Designer.cs">
       <DependentUpon>FormAddMarket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormListMarket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Utilities\Login.cs" />
     <EmbeddedResource Include="Forms\FormAddMarket.resx">
       <DependentUpon>FormAddMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddProduct.resx">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormListMarket.resx">
       <DependentUpon>FormListMarket.cs</DependentUpon>

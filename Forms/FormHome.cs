@@ -59,5 +59,12 @@ namespace MarketProject
             formListMarket.Show();
 
         }
+
+        private void addProduct_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+             
+            
+        }
     }
 }
