@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarketProject.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,8 +64,12 @@ namespace MarketProject
         private void addProduct_Click(object sender, EventArgs e)
         {
             panel2.Controls.Clear();
-             
-            
+            FormAddProduct formAddProduct = new FormAddProduct();
+            formAddProduct.TopLevel = false;
+            panel2.Controls.Add(formAddProduct);
+            formAddProduct.Dock = DockStyle.Fill;
+            formAddProduct.Show();
+
         }
     }
 }
