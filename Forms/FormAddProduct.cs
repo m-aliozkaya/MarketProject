@@ -45,6 +45,14 @@ namespace MarketProject.Forms
            
         }
 
-        
+        private void cmbBoxMarket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtproductName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

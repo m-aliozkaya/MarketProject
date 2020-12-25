@@ -20,8 +20,8 @@ namespace MarketProject
 
         private void labelHover(object sender, EventArgs e)
         {
-                var label = (Label)sender;
-                label.ForeColor = Color.White;    
+            var label = (Label)sender;
+            label.ForeColor = Color.White;
         }
 
         private void labelLeave(object sender, EventArgs e)
@@ -80,6 +80,25 @@ namespace MarketProject
             panel2.Controls.Add(formListProduct);
             formListProduct.Dock = DockStyle.Fill;
             formListProduct.Show();
+        }
+
+        private void addEmployee_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FormAddEmployee formAddEmployee = new FormAddEmployee();
+            formAddEmployee.TopLevel = false;
+            panel2.Controls.Add(formAddEmployee);
+            formAddEmployee.Dock = DockStyle.Fill;
+            formAddEmployee.Show();
+        }
+        private void listEmployee_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FormListEmployee formListEmployee = new FormListEmployee();
+            formListEmployee.TopLevel = false;
+            panel2.Controls.Add(formListEmployee);
+            formListEmployee.Dock = DockStyle.Fill;
+            formListEmployee.Show();
         }
     }
 }

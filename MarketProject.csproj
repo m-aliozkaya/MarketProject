@@ -57,6 +57,18 @@
     <Compile Include="Entities\Market.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Supplier.cs" />
+    <Compile Include="Forms\FormAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEmployee.Designer.cs">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormListEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormListEmployee.Designer.cs">
+      <DependentUpon>FormListEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAddMarket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +112,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Database.cs" />
     <Compile Include="Utilities\Login.cs" />
+    <EmbeddedResource Include="Forms\FormAddEmployee.resx">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddMarket.resx">
       <DependentUpon>FormAddMarket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddProduct.resx">
       <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormListEmployee.resx">
+      <DependentUpon>FormListEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormListMarket.resx">
       <DependentUpon>FormListMarket.cs</DependentUpon>

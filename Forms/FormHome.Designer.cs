@@ -123,6 +123,7 @@ namespace MarketProject
             this.listEmployee.Size = new System.Drawing.Size(139, 25);
             this.listEmployee.TabIndex = 9;
             this.listEmployee.Text = "Çalışan Listele";
+            this.listEmployee.Click += new System.EventHandler(this.listEmployee_Click);
             this.listEmployee.MouseLeave += new System.EventHandler(this.labelLeave);
             this.listEmployee.MouseHover += new System.EventHandler(this.labelHover);
             // 
@@ -135,6 +136,7 @@ namespace MarketProject
             this.addEmployee.Size = new System.Drawing.Size(121, 25);
             this.addEmployee.TabIndex = 8;
             this.addEmployee.Text = "Çalışan Ekle";
+            this.addEmployee.Click += new System.EventHandler(this.addEmployee_Click);
             this.addEmployee.MouseLeave += new System.EventHandler(this.labelLeave);
             this.addEmployee.MouseHover += new System.EventHandler(this.labelHover);
             // 
