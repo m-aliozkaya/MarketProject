@@ -38,54 +38,60 @@ namespace MarketProject
             // txtMarketName
             // 
             this.txtMarketName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMarketName.Location = new System.Drawing.Point(136, 252);
+            this.txtMarketName.Location = new System.Drawing.Point(121, 201);
+            this.txtMarketName.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.txtMarketName.Name = "txtMarketName";
-            this.txtMarketName.Size = new System.Drawing.Size(242, 39);
+            this.txtMarketName.Size = new System.Drawing.Size(215, 34);
             this.txtMarketName.TabIndex = 0;
             // 
             // txtMarketAdres
             // 
             this.txtMarketAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMarketAdres.Location = new System.Drawing.Point(136, 377);
+            this.txtMarketAdres.Location = new System.Drawing.Point(121, 303);
+            this.txtMarketAdres.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.txtMarketAdres.Name = "txtMarketAdres";
-            this.txtMarketAdres.Size = new System.Drawing.Size(242, 39);
+            this.txtMarketAdres.Size = new System.Drawing.Size(215, 34);
             this.txtMarketAdres.TabIndex = 1;
             // 
             // checkListProducts
             // 
             this.checkListProducts.FormattingEnabled = true;
-            this.checkListProducts.Location = new System.Drawing.Point(464, 54);
+            this.checkListProducts.Location = new System.Drawing.Point(411, 43);
+            this.checkListProducts.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.checkListProducts.Name = "checkListProducts";
-            this.checkListProducts.Size = new System.Drawing.Size(313, 579);
+            this.checkListProducts.Size = new System.Drawing.Size(279, 464);
             this.checkListProducts.TabIndex = 4;
             // 
             // btnAddMarket
             // 
-            this.btnAddMarket.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddMarket.ButtonColor = System.Drawing.Color.Red;
-            this.btnAddMarket.Location = new System.Drawing.Point(170, 536);
+            this.btnAddMarket.BorderColor = System.Drawing.Color.Black;
+            this.btnAddMarket.ButtonColor = System.Drawing.Color.Black;
+            this.btnAddMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddMarket.Location = new System.Drawing.Point(151, 429);
+            this.btnAddMarket.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnAddMarket.Name = "btnAddMarket";
-            this.btnAddMarket.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnAddMarket.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnAddMarket.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnAddMarket.Size = new System.Drawing.Size(181, 63);
+            this.btnAddMarket.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddMarket.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddMarket.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
+            this.btnAddMarket.Size = new System.Drawing.Size(161, 49);
             this.btnAddMarket.TabIndex = 5;
             this.btnAddMarket.Text = "Market Ekle";
-            this.btnAddMarket.TextColor = System.Drawing.Color.White;
+            this.btnAddMarket.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
             this.btnAddMarket.UseVisualStyleBackColor = true;
             this.btnAddMarket.Click += new System.EventHandler(this.btnAddMarket_Click);
             // 
             // FormAddMarket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 735);
+            this.ClientSize = new System.Drawing.Size(775, 588);
             this.ControlBox = false;
             this.Controls.Add(this.btnAddMarket);
             this.Controls.Add(this.checkListProducts);
             this.Controls.Add(this.txtMarketAdres);
             this.Controls.Add(this.txtMarketName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "FormAddMarket";
             this.Text = "FormAddList";
             this.Load += new System.EventHandler(this.FormAddList_Load);

@@ -20,9 +20,7 @@ namespace MarketProject.Forms
 
         private void FormAddProduct_Load(object sender, EventArgs e)
         {
-            List<Product> products = ProductManager.selectProducts();
-
-           
+            
         }
 
 
@@ -33,7 +31,10 @@ namespace MarketProject.Forms
             double productPrice = Convert.ToDouble(txtproductPrice.Text);
 
             // kraicim ID yi halleder
-            Product product = new Product(0,productName,productPrice);
+            Product product = new Product(productName,productPrice);
+           
         }
+
+        
     }
 }

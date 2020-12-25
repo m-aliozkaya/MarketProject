@@ -147,6 +147,7 @@ namespace MarketProject
             this.listProduct.Size = new System.Drawing.Size(140, 25);
             this.listProduct.TabIndex = 7;
             this.listProduct.Text = "Ürünleri Listele";
+            this.listProduct.Click += new System.EventHandler(this.listProduct_Click);
             this.listProduct.MouseLeave += new System.EventHandler(this.labelLeave);
             this.listProduct.MouseHover += new System.EventHandler(this.labelHover);
             // 

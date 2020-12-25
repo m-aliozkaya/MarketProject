@@ -71,5 +71,15 @@ namespace MarketProject
             formAddProduct.Show();
 
         }
+
+        private void listProduct_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FormListProduct formListProduct = new FormListProduct();
+            formListProduct.TopLevel = false;
+            panel2.Controls.Add(formListProduct);
+            formListProduct.Dock = DockStyle.Fill;
+            formListProduct.Show();
+        }
     }
 }
