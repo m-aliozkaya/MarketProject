@@ -8,30 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MarketProject
+namespace MarketProject.Forms
 {
     public partial class FormAddEmployee : Form
     {
-        List<Market> marketList;
+        private List<Market> marketList;
         public FormAddEmployee()
         {
             InitializeComponent();
         }
-
-        private void button_WOC1_Click(object sender, EventArgs e)
-        {
-            string employeeAdress = txtemployeeAdress.Text;
-            string employeeName = txtemployeeName.Text;
-            double employeeSalary = Convert.ToDouble(txtSalary.Text);
-            Market market = marketList[cmbBoxMarket.SelectedIndex];
-
-                
-            Employee employee = new Employee(employeeName, employeeAdress, employeeSalary, market );
-
-            EmployeeManager.addEmployee(employee);
-        }
-
-
 
         private void FormAddEmployee_Load(object sender, EventArgs e)
         {
@@ -39,28 +24,20 @@ namespace MarketProject
 
             foreach (Market market in marketList)
             {
-                cmbBoxMarket.Items.Add(market.marketName);
+                cmbMarket.Items.Add(market);
             }
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void addButton_Click(object sender, EventArgs e)
         {
+           string employeeName = txtName.Text;
+           string employeeAdress = txtAdres.Text;
+           double employeeSalary = Convert.ToDouble(txtSalary.Text);
 
-        }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtemployeName(object sender, EventArgs e)
-        {
-
+           EmployeeManager.addEmployee(
+               new Employee(employeeName, employeeAdress, employeeSalary, marketList[cmbMarket.SelectedIndex]) 
+               ); 
         }
     }
 }

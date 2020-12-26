@@ -10,7 +10,8 @@ namespace MarketProject
         private static string tableName = "Employee";
         private static string nameColumn = "employeeName";
         private static string adresColumn = "employeeAdres";
-
+        private static string salaryColumn = "employeePrice";
+        private static string marketColumn = "marketID";
         
 
         public static List<Employee> selectEmployees(Market selectedMarket)
@@ -108,7 +109,12 @@ namespace MarketProject
         {
             using (SqlConnection connection = Database.getConnection())
             {
-                string query = $"INSERT into {tableName}({nameColumn}, {adresColumn}) VALUES('{employee.employeeName}', '{employee.employeeAdress}'); SELECT SCOPE_IDENTITY()";
+                string query = $"INSERT into {tableName}({nameColumn}, {adresColumn}, {salaryColumn}, {marketColumn}) " +
+                    $"VALUES('{employee.employeeName}'" +
+                    $", '{employee.employeeAdress}'" +
+                    $", '{employee.employeeSalary}' " +
+                    $", '{employee.market.marketID}')" +
+                    $"; SELECT SCOPE_IDENTITY()";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 try

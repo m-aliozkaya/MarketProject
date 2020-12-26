@@ -63,6 +63,12 @@
     <Compile Include="Forms\FormAddEmployee.Designer.cs">
       <DependentUpon>FormAddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddSupplier.Designer.cs">
+      <DependentUpon>FormAddSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormListEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="Forms\FormListProduct.Designer.cs">
       <DependentUpon>FormListProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormListSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormListSupplier.Designer.cs">
+      <DependentUpon>FormListSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +120,7 @@
     <Compile Include="Managers\EmployeeManager.cs" />
     <Compile Include="Managers\ProductManager.cs" />
     <Compile Include="Managers\MarketManager.cs" />
+    <Compile Include="Managers\SupplierManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Database.cs" />
@@ -121,6 +134,9 @@
     <EmbeddedResource Include="Forms\FormAddProduct.resx">
       <DependentUpon>FormAddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddSupplier.resx">
+      <DependentUpon>FormAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormListEmployee.resx">
       <DependentUpon>FormListEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormListProduct.resx">
       <DependentUpon>FormListProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormListSupplier.resx">
+      <DependentUpon>FormListSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

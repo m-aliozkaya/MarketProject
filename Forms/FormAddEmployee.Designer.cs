@@ -1,5 +1,5 @@
 ﻿
-namespace MarketProject
+namespace MarketProject.Forms
 {
     partial class FormAddEmployee
     {
@@ -29,87 +29,156 @@ namespace MarketProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEmployee));
-            this.cmbBoxMarket = new System.Windows.Forms.ComboBox();
-            this.labelMarket = new System.Windows.Forms.Label();
-            this.txtemployeeName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbMarket = new System.Windows.Forms.ComboBox();
+            this.cmbPozisyon = new System.Windows.Forms.ComboBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAdres = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
-            this.txtemployeeAdress = new System.Windows.Forms.TextBox();
-            this.btnAddEmployee = new ePOSOne.btnProduct.Button_WOC();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelAdress = new System.Windows.Forms.Label();
-            this.labelSalary = new System.Windows.Forms.Label();
+            this.addButton = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
-            // cmbBoxMarket
+            // label1
             // 
-            this.cmbBoxMarket.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbBoxMarket, "cmbBoxMarket");
-            this.cmbBoxMarket.Name = "cmbBoxMarket";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(120, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Marketi";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelMarket
+            // label2
             // 
-            resources.ApplyResources(this.labelMarket, "labelMarket");
-            this.labelMarket.Name = "labelMarket";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(120, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 37);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Pozisyonu";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtemployeeName
+            // label3
             // 
-            resources.ApplyResources(this.txtemployeeName, "txtemployeeName");
-            this.txtemployeeName.Name = "txtemployeeName";
-            this.txtemployeeName.TextChanged += new System.EventHandler(this.txtemployeName);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(120, 282);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 37);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Adı";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(120, 357);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 37);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Adresi";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(120, 425);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 37);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Maaşı";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbMarket
+            // 
+            this.cmbMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbMarket.FormattingEnabled = true;
+            this.cmbMarket.Location = new System.Drawing.Point(333, 134);
+            this.cmbMarket.Name = "cmbMarket";
+            this.cmbMarket.Size = new System.Drawing.Size(305, 45);
+            this.cmbMarket.TabIndex = 6;
+            // 
+            // cmbPozisyon
+            // 
+            this.cmbPozisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbPozisyon.FormattingEnabled = true;
+            this.cmbPozisyon.Items.AddRange(new object[] {
+            "Müdür",
+            "Müdür Yardımcısı",
+            "Kasiyer"});
+            this.cmbPozisyon.Location = new System.Drawing.Point(333, 200);
+            this.cmbPozisyon.Name = "cmbPozisyon";
+            this.cmbPozisyon.Size = new System.Drawing.Size(305, 45);
+            this.cmbPozisyon.TabIndex = 7;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtName.Location = new System.Drawing.Point(333, 275);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(305, 44);
+            this.txtName.TabIndex = 8;
+            // 
+            // txtAdres
+            // 
+            this.txtAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdres.Location = new System.Drawing.Point(333, 350);
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(305, 44);
+            this.txtAdres.TabIndex = 9;
             // 
             // txtSalary
             // 
-            resources.ApplyResources(this.txtSalary, "txtSalary");
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSalary.Location = new System.Drawing.Point(333, 418);
             this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(305, 44);
+            this.txtSalary.TabIndex = 10;
             // 
-            // txtemployeeAdress
+            // addButton
             // 
-            resources.ApplyResources(this.txtemployeeAdress, "txtemployeeAdress");
-            this.txtemployeeAdress.Name = "txtemployeeAdress";
-            // 
-            // btnAddEmployee
-            // 
-            this.btnAddEmployee.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddEmployee.ButtonColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.btnAddEmployee, "btnAddEmployee");
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnAddEmployee.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnAddEmployee.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnAddEmployee.TextColor = System.Drawing.Color.White;
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
-            this.btnAddEmployee.Click += new System.EventHandler(this.button_WOC1_Click);
-            // 
-            // labelName
-            // 
-            resources.ApplyResources(this.labelName, "labelName");
-            this.labelName.Name = "labelName";
-            // 
-            // labelAdress
-            // 
-            resources.ApplyResources(this.labelAdress, "labelAdress");
-            this.labelAdress.Name = "labelAdress";
-            // 
-            // labelSalary
-            // 
-            resources.ApplyResources(this.labelSalary, "labelSalary");
-            this.labelSalary.Name = "labelSalary";
+            this.addButton.BorderColor = System.Drawing.Color.Silver;
+            this.addButton.ButtonColor = System.Drawing.Color.Red;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addButton.Location = new System.Drawing.Point(438, 529);
+            this.addButton.Name = "addButton";
+            this.addButton.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.addButton.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.addButton.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.addButton.Size = new System.Drawing.Size(200, 65);
+            this.addButton.TabIndex = 11;
+            this.addButton.Text = "Ekle";
+            this.addButton.TextColor = System.Drawing.Color.White;
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // FormAddEmployee
             // 
-            resources.ApplyResources(this, "$this");
-            this.ControlBox = false;
-            this.Controls.Add(this.labelSalary);
-            this.Controls.Add(this.labelAdress);
-            this.Controls.Add(this.labelName);
-            this.Controls.Add(this.txtemployeeAdress);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(872, 735);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.txtSalary);
-            this.Controls.Add(this.txtemployeeName);
-            this.Controls.Add(this.labelMarket);
-            this.Controls.Add(this.cmbBoxMarket);
-            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.txtAdres);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.cmbPozisyon);
+            this.Controls.Add(this.cmbMarket);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAddEmployee";
+            this.Text = "FormAddEmployee";
             this.Load += new System.EventHandler(this.FormAddEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,30 +192,11 @@ namespace MarketProject
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private ePOSOne.btnProduct.Button_WOC button_ekle;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private ePOSOne.btnProduct.Button_WOC btnAddEmployee;
-        private System.Windows.Forms.ComboBox cmbBoxMarket;
-        private System.Windows.Forms.Label labelMarket;
-        private System.Windows.Forms.TextBox txtemployeeName;
+        private System.Windows.Forms.ComboBox cmbMarket;
+        private System.Windows.Forms.ComboBox cmbPozisyon;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAdres;
         private System.Windows.Forms.TextBox txtSalary;
-        private System.Windows.Forms.TextBox txtemployeeAdress;
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label labelAdress;
-        private System.Windows.Forms.Label labelSalary;
+        private ePOSOne.btnProduct.Button_WOC addButton;
     }
 }

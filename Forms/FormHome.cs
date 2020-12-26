@@ -100,5 +100,25 @@ namespace MarketProject
             formListEmployee.Dock = DockStyle.Fill;
             formListEmployee.Show();
         }
+
+        private void listSupplier_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FormListSupplier formListSupplier = new FormListSupplier();
+            formListSupplier.TopLevel = false;
+            panel2.Controls.Add(formListSupplier);
+            formListSupplier.Dock = DockStyle.Fill;
+            formListSupplier.Show();
+        }
+
+        private void addSupplier_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FormAddSupplier formAddSupplier = new FormAddSupplier();
+            formAddSupplier.TopLevel = false;
+            panel2.Controls.Add(formAddSupplier);
+            formAddSupplier.Dock = DockStyle.Fill;
+            formAddSupplier.Show();
+        }
     }
 }
