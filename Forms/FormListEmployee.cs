@@ -26,8 +26,9 @@ namespace MarketProject.Forms
             dataGridViewEmployee.DataSource = employeeList;
         }
 
-    
+        private void dataGridViewEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-    
+        }
     }
 }

@@ -68,20 +68,21 @@ namespace MarketProject
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataProduct.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataProduct.Location = new System.Drawing.Point(25, 89);
+            this.dataProduct.Location = new System.Drawing.Point(22, 71);
+            this.dataProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataProduct.Name = "dataProduct";
-            this.dataProduct.RowHeadersVisible = false;
-            this.dataProduct.RowHeadersWidth = 62;
+            this.dataProduct.RowHeadersWidth = 30;
+            this.dataProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dataProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataProduct.RowTemplate.Height = 28;
-            this.dataProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataProduct.Size = new System.Drawing.Size(842, 292);
+            this.dataProduct.Size = new System.Drawing.Size(748, 234);
             this.dataProduct.TabIndex = 0;
             // 
             // dataEmployee
             // 
             this.dataEmployee.AllowUserToAddRows = false;
+            this.dataEmployee.AllowUserToDeleteRows = false;
             this.dataEmployee.AllowUserToResizeColumns = false;
             this.dataEmployee.AllowUserToResizeRows = false;
             this.dataEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
@@ -103,7 +104,9 @@ namespace MarketProject
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataEmployee.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataEmployee.Location = new System.Drawing.Point(25, 401);
+            this.dataEmployee.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataEmployee.Location = new System.Drawing.Point(22, 321);
+            this.dataEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataEmployee.Name = "dataEmployee";
             this.dataEmployee.RowHeadersWidth = 30;
             this.dataEmployee.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -113,28 +116,30 @@ namespace MarketProject
             this.dataEmployee.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dataEmployee.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataEmployee.RowTemplate.Height = 28;
-            this.dataEmployee.Size = new System.Drawing.Size(842, 363);
+            this.dataEmployee.Size = new System.Drawing.Size(748, 290);
             this.dataEmployee.TabIndex = 1;
             // 
             // cmbBoxMarkets
             // 
             this.cmbBoxMarkets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbBoxMarkets.FormattingEnabled = true;
-            this.cmbBoxMarkets.Location = new System.Drawing.Point(25, 24);
+            this.cmbBoxMarkets.Location = new System.Drawing.Point(22, 19);
+            this.cmbBoxMarkets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBoxMarkets.Name = "cmbBoxMarkets";
-            this.cmbBoxMarkets.Size = new System.Drawing.Size(890, 37);
+            this.cmbBoxMarkets.Size = new System.Drawing.Size(792, 33);
             this.cmbBoxMarkets.TabIndex = 2;
             this.cmbBoxMarkets.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMarkets_SelectedIndexChanged);
             // 
             // FormListMarket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 789);
+            this.ClientSize = new System.Drawing.Size(856, 631);
             this.Controls.Add(this.cmbBoxMarkets);
             this.Controls.Add(this.dataEmployee);
             this.Controls.Add(this.dataProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormListMarket";
             this.Text = "FormListMarket";
             this.Load += new System.EventHandler(this.FormListMarket_Load);

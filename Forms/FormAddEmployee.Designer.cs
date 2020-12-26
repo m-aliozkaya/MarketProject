@@ -46,9 +46,9 @@ namespace MarketProject.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(120, 142);
+            this.label1.Location = new System.Drawing.Point(107, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 37);
+            this.label1.Size = new System.Drawing.Size(103, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Marketi";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -57,9 +57,9 @@ namespace MarketProject.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(120, 208);
+            this.label2.Location = new System.Drawing.Point(107, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 37);
+            this.label2.Size = new System.Drawing.Size(140, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pozisyonu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -68,9 +68,9 @@ namespace MarketProject.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(120, 282);
+            this.label3.Location = new System.Drawing.Point(107, 227);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 37);
+            this.label3.Size = new System.Drawing.Size(53, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Adı";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -79,9 +79,9 @@ namespace MarketProject.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(120, 357);
+            this.label4.Location = new System.Drawing.Point(107, 286);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 37);
+            this.label4.Size = new System.Drawing.Size(91, 31);
             this.label4.TabIndex = 3;
             this.label4.Text = "Adresi";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,9 +90,9 @@ namespace MarketProject.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(120, 425);
+            this.label5.Location = new System.Drawing.Point(107, 340);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 37);
+            this.label5.Size = new System.Drawing.Size(86, 31);
             this.label5.TabIndex = 4;
             this.label5.Text = "Maaşı";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,9 +101,10 @@ namespace MarketProject.Forms
             // 
             this.cmbMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbMarket.FormattingEnabled = true;
-            this.cmbMarket.Location = new System.Drawing.Point(333, 134);
+            this.cmbMarket.Location = new System.Drawing.Point(296, 107);
+            this.cmbMarket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbMarket.Name = "cmbMarket";
-            this.cmbMarket.Size = new System.Drawing.Size(305, 45);
+            this.cmbMarket.Size = new System.Drawing.Size(272, 39);
             this.cmbMarket.TabIndex = 6;
             // 
             // cmbPozisyon
@@ -114,33 +115,37 @@ namespace MarketProject.Forms
             "Müdür",
             "Müdür Yardımcısı",
             "Kasiyer"});
-            this.cmbPozisyon.Location = new System.Drawing.Point(333, 200);
+            this.cmbPozisyon.Location = new System.Drawing.Point(296, 160);
+            this.cmbPozisyon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPozisyon.Name = "cmbPozisyon";
-            this.cmbPozisyon.Size = new System.Drawing.Size(305, 45);
+            this.cmbPozisyon.Size = new System.Drawing.Size(272, 39);
             this.cmbPozisyon.TabIndex = 7;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtName.Location = new System.Drawing.Point(333, 275);
+            this.txtName.Location = new System.Drawing.Point(296, 220);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(305, 44);
+            this.txtName.Size = new System.Drawing.Size(272, 38);
             this.txtName.TabIndex = 8;
             // 
             // txtAdres
             // 
             this.txtAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdres.Location = new System.Drawing.Point(333, 350);
+            this.txtAdres.Location = new System.Drawing.Point(296, 280);
+            this.txtAdres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(305, 44);
+            this.txtAdres.Size = new System.Drawing.Size(272, 38);
             this.txtAdres.TabIndex = 9;
             // 
             // txtSalary
             // 
             this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSalary.Location = new System.Drawing.Point(333, 418);
+            this.txtSalary.Location = new System.Drawing.Point(296, 334);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(305, 44);
+            this.txtSalary.Size = new System.Drawing.Size(272, 38);
             this.txtSalary.TabIndex = 10;
             // 
             // addButton
@@ -148,12 +153,13 @@ namespace MarketProject.Forms
             this.addButton.BorderColor = System.Drawing.Color.Silver;
             this.addButton.ButtonColor = System.Drawing.Color.Red;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addButton.Location = new System.Drawing.Point(438, 529);
+            this.addButton.Location = new System.Drawing.Point(389, 423);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addButton.Name = "addButton";
             this.addButton.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.addButton.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.addButton.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.addButton.Size = new System.Drawing.Size(200, 65);
+            this.addButton.Size = new System.Drawing.Size(178, 52);
             this.addButton.TabIndex = 11;
             this.addButton.Text = "Ekle";
             this.addButton.TextColor = System.Drawing.Color.White;
@@ -162,9 +168,9 @@ namespace MarketProject.Forms
             // 
             // FormAddEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 735);
+            this.ClientSize = new System.Drawing.Size(775, 588);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtAdres);
@@ -177,6 +183,7 @@ namespace MarketProject.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAddEmployee";
             this.Text = "FormAddEmployee";
             this.Load += new System.EventHandler(this.FormAddEmployee_Load);
