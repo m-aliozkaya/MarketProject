@@ -30,6 +30,7 @@ namespace MarketProject
             }
 
             cmbBoxMarkets.SelectedIndex = 0;
+
         }
 
 
@@ -46,6 +47,8 @@ namespace MarketProject
             dataProduct.Columns["market"].Visible = false;
 
             dataEmployee.DataSource = selectedMarket.employeeList;
-        }
+            dataEmployee.Columns["employeeID"].Visible = false;
+/*            dataEmployee.Columns[""].Visible = false;
+*/        }
     }
 }

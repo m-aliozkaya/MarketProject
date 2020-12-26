@@ -3,8 +3,9 @@
     public class Employee
     {
         public int employeeID { get; set; }
-        public string employeeAdress { get; set; }
         public string employeeName { get; set; }
+
+        public string employeeAdress { get; set; }
         public double employeeSalary { get; set; }
         public string dailyHoliday { get; set; }
         public int yearlyHoliday { get; set; }
