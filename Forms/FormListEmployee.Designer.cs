@@ -36,22 +36,20 @@ namespace MarketProject.Forms
             // dataGridViewEmployee
             // 
             this.dataGridViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmployee.Location = new System.Drawing.Point(39, 145);
-            this.dataGridViewEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewEmployee.Location = new System.Drawing.Point(35, 116);
             this.dataGridViewEmployee.Name = "dataGridViewEmployee";
             this.dataGridViewEmployee.RowHeadersWidth = 51;
             this.dataGridViewEmployee.RowTemplate.Height = 24;
-            this.dataGridViewEmployee.Size = new System.Drawing.Size(770, 434);
+            this.dataGridViewEmployee.Size = new System.Drawing.Size(684, 347);
             this.dataGridViewEmployee.TabIndex = 0;
             // 
             // FormListEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 735);
+            this.ClientSize = new System.Drawing.Size(856, 631);
             this.Controls.Add(this.dataGridViewEmployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormListEmployee";
             this.Text = "FormListEmployee";
             this.Load += new System.EventHandler(this.FormListEmployee_Load);

@@ -117,7 +117,7 @@ namespace MarketProject.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 543);
+            this.ClientSize = new System.Drawing.Size(856, 631);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbBoxMarket);
             this.Controls.Add(this.label2);

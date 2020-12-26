@@ -32,13 +32,16 @@ namespace MarketProject
             this.txtMarketName = new System.Windows.Forms.TextBox();
             this.txtMarketAdres = new System.Windows.Forms.TextBox();
             this.checkListProducts = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnAddMarket = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
             // txtMarketName
             // 
             this.txtMarketName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMarketName.Location = new System.Drawing.Point(121, 201);
+            this.txtMarketName.Location = new System.Drawing.Point(205, 186);
             this.txtMarketName.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.txtMarketName.Name = "txtMarketName";
             this.txtMarketName.Size = new System.Drawing.Size(215, 34);
@@ -47,7 +50,7 @@ namespace MarketProject
             // txtMarketAdres
             // 
             this.txtMarketAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMarketAdres.Location = new System.Drawing.Point(121, 303);
+            this.txtMarketAdres.Location = new System.Drawing.Point(205, 281);
             this.txtMarketAdres.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.txtMarketAdres.Name = "txtMarketAdres";
             this.txtMarketAdres.Size = new System.Drawing.Size(215, 34);
@@ -56,18 +59,49 @@ namespace MarketProject
             // checkListProducts
             // 
             this.checkListProducts.FormattingEnabled = true;
-            this.checkListProducts.Location = new System.Drawing.Point(411, 43);
+            this.checkListProducts.Location = new System.Drawing.Point(485, 88);
             this.checkListProducts.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.checkListProducts.Name = "checkListProducts";
-            this.checkListProducts.Size = new System.Drawing.Size(279, 464);
+            this.checkListProducts.Size = new System.Drawing.Size(319, 497);
             this.checkListProducts.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(48, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Market Adı:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(93, 286);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 29);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Adresi:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(567, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 29);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "ÜRÜNLER";
             // 
             // btnAddMarket
             // 
             this.btnAddMarket.BorderColor = System.Drawing.Color.Black;
             this.btnAddMarket.ButtonColor = System.Drawing.Color.Black;
             this.btnAddMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAddMarket.Location = new System.Drawing.Point(151, 429);
+            this.btnAddMarket.Location = new System.Drawing.Point(232, 390);
             this.btnAddMarket.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnAddMarket.Name = "btnAddMarket";
             this.btnAddMarket.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -84,8 +118,11 @@ namespace MarketProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 588);
+            this.ClientSize = new System.Drawing.Size(856, 631);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddMarket);
             this.Controls.Add(this.checkListProducts);
             this.Controls.Add(this.txtMarketAdres);
@@ -106,5 +143,8 @@ namespace MarketProject
         private System.Windows.Forms.TextBox txtMarketAdres;
         private System.Windows.Forms.CheckedListBox checkListProducts;
         private ePOSOne.btnProduct.Button_WOC btnAddMarket;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
