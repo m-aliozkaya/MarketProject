@@ -79,7 +79,7 @@ namespace MarketProject
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dataProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataProduct.RowTemplate.Height = 28;
-            this.dataProduct.Size = new System.Drawing.Size(874, 255);
+            this.dataProduct.Size = new System.Drawing.Size(874, 323);
             this.dataProduct.TabIndex = 0;
             // 
             // cmbBoxMarkets
@@ -89,7 +89,7 @@ namespace MarketProject
             this.cmbBoxMarkets.Location = new System.Drawing.Point(42, 32);
             this.cmbBoxMarkets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBoxMarkets.Name = "cmbBoxMarkets";
-            this.cmbBoxMarkets.Size = new System.Drawing.Size(740, 37);
+            this.cmbBoxMarkets.Size = new System.Drawing.Size(685, 37);
             this.cmbBoxMarkets.TabIndex = 2;
             this.cmbBoxMarkets.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMarkets_SelectedIndexChanged);
             // 
@@ -121,13 +121,13 @@ namespace MarketProject
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataEmployee.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataEmployee.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataEmployee.Location = new System.Drawing.Point(42, 379);
+            this.dataEmployee.Location = new System.Drawing.Point(42, 456);
             this.dataEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataEmployee.Name = "dataEmployee";
             this.dataEmployee.RowHeadersWidth = 30;
             this.dataEmployee.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataEmployee.RowTemplate.Height = 24;
-            this.dataEmployee.Size = new System.Drawing.Size(874, 276);
+            this.dataEmployee.Size = new System.Drawing.Size(874, 372);
             this.dataEmployee.TabIndex = 8;
             // 
             // btnSave
@@ -137,7 +137,7 @@ namespace MarketProject
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(644, 680);
+            this.btnSave.Location = new System.Drawing.Point(651, 892);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -158,7 +158,7 @@ namespace MarketProject
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEdit.Location = new System.Drawing.Point(76, 686);
+            this.btnEdit.Location = new System.Drawing.Point(88, 892);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -178,7 +178,7 @@ namespace MarketProject
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDel.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDel.Location = new System.Drawing.Point(231, 685);
+            this.btnDel.Location = new System.Drawing.Point(252, 892);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDel.Name = "btnDel";
             this.btnDel.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -195,7 +195,7 @@ namespace MarketProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 789);
+            this.ClientSize = new System.Drawing.Size(963, 992);
             this.Controls.Add(this.dataEmployee);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnEdit);

@@ -31,7 +31,7 @@ namespace MarketProject
                         while (dr.Read())
                         {
                             Market market = new Market(
-                               (int)dr["marketId"]
+                               (int)dr["marketID"]
                                 , (string)dr["marketName"]
                                 , (string)dr["marketAdres"]
                                 );
