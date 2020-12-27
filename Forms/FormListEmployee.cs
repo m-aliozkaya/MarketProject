@@ -37,8 +37,10 @@ namespace MarketProject.Forms
 
             dataGridViewComboBoxColumn.HeaderText = "marketler";
             dataGridViewComboBoxColumn.Name = "marketler";
+            dataGridViewComboBoxColumn.FlatStyle = FlatStyle.Popup;
 
-            dataGridViewEmployee.Columns.Add(dataGridViewComboBoxColumn);
+
+         dataGridViewEmployee.Columns.Add(dataGridViewComboBoxColumn);
 
 
             foreach (Market market in marketList)
