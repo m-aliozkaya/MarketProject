@@ -11,9 +11,9 @@ namespace MarketProject
         public BindingList<Employee> employeeList { get; set; }
         public BindingList<Product> productList { get; set; }
 
-        public Market(int marketId, string marketName, string marketAdress)
+        public Market(int marketID, string marketName, string marketAdress)
         {
-            this.marketID = marketId;
+            this.marketID = marketID;
             this.marketName = marketName;
             this.marketAdress = marketAdress;
         }
