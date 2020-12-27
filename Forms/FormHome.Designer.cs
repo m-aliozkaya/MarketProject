@@ -51,9 +51,9 @@ namespace MarketProject
             // 
             this.market.BackColor = System.Drawing.Color.Transparent;
             this.market.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.market.Location = new System.Drawing.Point(20, 124);
+            this.market.Location = new System.Drawing.Point(17, 140);
             this.market.Name = "market";
-            this.market.Size = new System.Drawing.Size(161, 45);
+            this.market.Size = new System.Drawing.Size(143, 36);
             this.market.TabIndex = 0;
             this.market.Text = "Market";
             // 
@@ -74,10 +74,9 @@ namespace MarketProject
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.market);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.panel1.Location = new System.Drawing.Point(-1, -5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(-1, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 800);
+            this.panel1.Size = new System.Drawing.Size(367, 640);
             this.panel1.TabIndex = 0;
             // 
             // label12
@@ -85,9 +84,9 @@ namespace MarketProject
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(16, 25);
+            this.label12.Location = new System.Drawing.Point(13, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(377, 65);
+            this.label12.Size = new System.Drawing.Size(318, 55);
             this.label12.TabIndex = 12;
             this.label12.Text = "Admin Paneli";
             // 
@@ -95,9 +94,9 @@ namespace MarketProject
             // 
             this.listSupplier.AutoSize = true;
             this.listSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listSupplier.Location = new System.Drawing.Point(52, 632);
+            this.listSupplier.Location = new System.Drawing.Point(45, 547);
             this.listSupplier.Name = "listSupplier";
-            this.listSupplier.Size = new System.Drawing.Size(225, 29);
+            this.listSupplier.Size = new System.Drawing.Size(178, 25);
             this.listSupplier.TabIndex = 11;
             this.listSupplier.Text = "Tedarikçileri Listele";
             this.listSupplier.Click += new System.EventHandler(this.listSupplier_Click);
@@ -108,9 +107,9 @@ namespace MarketProject
             // 
             this.addSupplier.AutoSize = true;
             this.addSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addSupplier.Location = new System.Drawing.Point(52, 603);
+            this.addSupplier.Location = new System.Drawing.Point(45, 523);
             this.addSupplier.Name = "addSupplier";
-            this.addSupplier.Size = new System.Drawing.Size(168, 29);
+            this.addSupplier.Size = new System.Drawing.Size(135, 25);
             this.addSupplier.TabIndex = 10;
             this.addSupplier.Text = "Tedarikçi Ekle";
             this.addSupplier.Click += new System.EventHandler(this.addSupplier_Click);
@@ -121,9 +120,9 @@ namespace MarketProject
             // 
             this.listEmployee.AutoSize = true;
             this.listEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listEmployee.Location = new System.Drawing.Point(52, 485);
+            this.listEmployee.Location = new System.Drawing.Point(45, 429);
             this.listEmployee.Name = "listEmployee";
-            this.listEmployee.Size = new System.Drawing.Size(170, 29);
+            this.listEmployee.Size = new System.Drawing.Size(139, 25);
             this.listEmployee.TabIndex = 9;
             this.listEmployee.Text = "Çalışan Listele";
             this.listEmployee.Click += new System.EventHandler(this.listEmployee_Click);
@@ -134,9 +133,9 @@ namespace MarketProject
             // 
             this.addEmployee.AutoSize = true;
             this.addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addEmployee.Location = new System.Drawing.Point(52, 454);
+            this.addEmployee.Location = new System.Drawing.Point(45, 404);
             this.addEmployee.Name = "addEmployee";
-            this.addEmployee.Size = new System.Drawing.Size(147, 29);
+            this.addEmployee.Size = new System.Drawing.Size(121, 25);
             this.addEmployee.TabIndex = 8;
             this.addEmployee.Text = "Çalışan Ekle";
             this.addEmployee.Click += new System.EventHandler(this.addEmployee_Click);
@@ -147,9 +146,9 @@ namespace MarketProject
             // 
             this.listProduct.AutoSize = true;
             this.listProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listProduct.Location = new System.Drawing.Point(52, 340);
+            this.listProduct.Location = new System.Drawing.Point(45, 313);
             this.listProduct.Name = "listProduct";
-            this.listProduct.Size = new System.Drawing.Size(175, 29);
+            this.listProduct.Size = new System.Drawing.Size(140, 25);
             this.listProduct.TabIndex = 7;
             this.listProduct.Text = "Ürünleri Listele";
             this.listProduct.Click += new System.EventHandler(this.listProduct_Click);
@@ -160,9 +159,9 @@ namespace MarketProject
             // 
             this.addProduct.AutoSize = true;
             this.addProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addProduct.Location = new System.Drawing.Point(52, 309);
+            this.addProduct.Location = new System.Drawing.Point(45, 288);
             this.addProduct.Name = "addProduct";
-            this.addProduct.Size = new System.Drawing.Size(118, 29);
+            this.addProduct.Size = new System.Drawing.Size(97, 25);
             this.addProduct.TabIndex = 6;
             this.addProduct.Text = "Ürün Ekle";
             this.addProduct.Click += new System.EventHandler(this.addProduct_Click);
@@ -173,9 +172,9 @@ namespace MarketProject
             // 
             this.listMarket.AutoSize = true;
             this.listMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listMarket.Location = new System.Drawing.Point(52, 200);
+            this.listMarket.Location = new System.Drawing.Point(45, 201);
             this.listMarket.Name = "listMarket";
-            this.listMarket.Size = new System.Drawing.Size(197, 29);
+            this.listMarket.Size = new System.Drawing.Size(158, 25);
             this.listMarket.TabIndex = 5;
             this.listMarket.Text = "Marketleri Listele";
             this.listMarket.Click += new System.EventHandler(this.listMarket_Click);
@@ -186,9 +185,9 @@ namespace MarketProject
             // 
             this.addMarket.AutoSize = true;
             this.addMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addMarket.Location = new System.Drawing.Point(52, 169);
+            this.addMarket.Location = new System.Drawing.Point(45, 176);
             this.addMarket.Name = "addMarket";
-            this.addMarket.Size = new System.Drawing.Size(140, 29);
+            this.addMarket.Size = new System.Drawing.Size(115, 25);
             this.addMarket.TabIndex = 4;
             this.addMarket.Text = "Market Ekle";
             this.addMarket.Click += new System.EventHandler(this.addMarket_Click);
@@ -199,9 +198,9 @@ namespace MarketProject
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(20, 542);
+            this.label3.Location = new System.Drawing.Point(17, 475);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(209, 61);
+            this.label3.Size = new System.Drawing.Size(186, 49);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tedarikçi";
             // 
@@ -209,9 +208,9 @@ namespace MarketProject
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(20, 400);
+            this.label2.Location = new System.Drawing.Point(17, 361);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 54);
+            this.label2.Size = new System.Drawing.Size(143, 43);
             this.label2.TabIndex = 2;
             this.label2.Text = "Çalışan";
             // 
@@ -219,30 +218,28 @@ namespace MarketProject
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(20, 261);
+            this.label1.Location = new System.Drawing.Point(17, 250);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 64);
+            this.label1.Size = new System.Drawing.Size(114, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ürün";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel2.Location = new System.Drawing.Point(410, -1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(364, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(963, 792);
+            this.panel2.Size = new System.Drawing.Size(856, 634);
             this.panel2.TabIndex = 1;
             // 
             // FormHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1372, 784);
+            this.ClientSize = new System.Drawing.Size(1220, 627);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHome";

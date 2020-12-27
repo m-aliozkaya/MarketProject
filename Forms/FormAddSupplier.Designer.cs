@@ -76,19 +76,21 @@ namespace MarketProject.Forms
             // 
             // addButton
             // 
-            this.addButton.BorderColor = System.Drawing.Color.Silver;
-            this.addButton.ButtonColor = System.Drawing.Color.Red;
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addButton.Location = new System.Drawing.Point(461, 373);
+            this.addButton.BorderColor = System.Drawing.Color.Black;
+            this.addButton.ButtonColor = System.Drawing.Color.Black;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.addButton.Location = new System.Drawing.Point(433, 376);
             this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addButton.Name = "addButton";
-            this.addButton.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.addButton.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.addButton.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.addButton.Size = new System.Drawing.Size(122, 40);
+            this.addButton.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.addButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.addButton.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
+            this.addButton.Size = new System.Drawing.Size(179, 56);
             this.addButton.TabIndex = 4;
-            this.addButton.Text = "Ekle";
-            this.addButton.TextColor = System.Drawing.Color.White;
+            this.addButton.Text = "Tedarikçi Ekle";
+            this.addButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
