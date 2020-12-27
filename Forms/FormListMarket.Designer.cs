@@ -41,7 +41,6 @@ namespace MarketProject
             this.btnSave = new ePOSOne.btnProduct.Button_WOC();
             this.btnEdit = new ePOSOne.btnProduct.Button_WOC();
             this.btnDel = new ePOSOne.btnProduct.Button_WOC();
-            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmployee)).BeginInit();
             this.SuspendLayout();
@@ -63,8 +62,6 @@ namespace MarketProject
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -194,13 +191,6 @@ namespace MarketProject
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // Column1
-            // 
-            this.Column1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
             // FormListMarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -231,6 +221,5 @@ namespace MarketProject
         private ePOSOne.btnProduct.Button_WOC btnEdit;
         private ePOSOne.btnProduct.Button_WOC btnSave;
         private System.Windows.Forms.DataGridView dataEmployee;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column1;
     }
 }
