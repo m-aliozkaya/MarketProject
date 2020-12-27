@@ -48,5 +48,10 @@ namespace MarketProject.Forms
                 ProductManager.updateProduct(product);
             }
         }
+
+        private void dataGridViewProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -134,13 +134,13 @@ namespace MarketProject
             this.btnAddMarket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMarket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAddMarket.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddMarket.Location = new System.Drawing.Point(348, 419);
+            this.btnAddMarket.Location = new System.Drawing.Point(400, 415);
             this.btnAddMarket.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnAddMarket.Name = "btnAddMarket";
             this.btnAddMarket.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btnAddMarket.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAddMarket.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
-            this.btnAddMarket.Size = new System.Drawing.Size(155, 52);
+            this.btnAddMarket.Size = new System.Drawing.Size(143, 49);
             this.btnAddMarket.TabIndex = 5;
             this.btnAddMarket.Text = "Market Ekle";
             this.btnAddMarket.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
