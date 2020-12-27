@@ -74,6 +74,8 @@ namespace MarketProject.Forms
             this.dataGridViewEmployee.RowTemplate.Height = 24;
             this.dataGridViewEmployee.Size = new System.Drawing.Size(805, 480);
             this.dataGridViewEmployee.TabIndex = 0;
+            this.dataGridViewEmployee.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewEmployee_DataError);
+            this.dataGridViewEmployee.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewEmployee_EditingControlShowing);
             // 
             // btnDel
             // 

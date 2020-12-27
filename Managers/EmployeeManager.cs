@@ -190,6 +190,7 @@ namespace MarketProject
                     $", {holidayColumn} = '{employee.dailyHoliday}'" +
                     $", {priceColumn} = '{employee.employeeSalary}'" +
                     $", {positionColumn} = '{employee.position}'" +
+                    $", {marketColumn} = '{employee.market.marketID}'" +
                     $" where {idColumn} = {employee.employeeID}";
 
 
