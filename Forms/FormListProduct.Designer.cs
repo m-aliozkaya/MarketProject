@@ -66,60 +66,63 @@ namespace MarketProject.Forms
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewProduct.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridViewProduct.Location = new System.Drawing.Point(90, 99);
-            this.dataGridViewProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewProduct.Location = new System.Drawing.Point(80, 79);
             this.dataGridViewProduct.Name = "dataGridViewProduct";
             this.dataGridViewProduct.RowHeadersWidth = 30;
             this.dataGridViewProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewProduct.RowTemplate.Height = 24;
-            this.dataGridViewProduct.Size = new System.Drawing.Size(697, 407);
+            this.dataGridViewProduct.Size = new System.Drawing.Size(620, 326);
             this.dataGridViewProduct.TabIndex = 0;
             // 
             // btnSave
             // 
-            this.btnSave.BorderColor = System.Drawing.Color.Silver;
-            this.btnSave.ButtonColor = System.Drawing.Color.Red;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSave.Location = new System.Drawing.Point(520, 588);
+            this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.ButtonColor = System.Drawing.Color.Black;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSave.Location = new System.Drawing.Point(473, 470);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnSave.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnSave.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnSave.Size = new System.Drawing.Size(219, 85);
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSave.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSave.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
+            this.btnSave.Size = new System.Drawing.Size(118, 49);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Kaydet";
-            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDel
             // 
-            this.btnDel.BorderColor = System.Drawing.Color.Silver;
-            this.btnDel.ButtonColor = System.Drawing.Color.Red;
-            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDel.Location = new System.Drawing.Point(157, 588);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDel.BorderColor = System.Drawing.Color.Black;
+            this.btnDel.ButtonColor = System.Drawing.Color.Black;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDel.Location = new System.Drawing.Point(198, 470);
             this.btnDel.Name = "btnDel";
-            this.btnDel.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnDel.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnDel.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnDel.Size = new System.Drawing.Size(183, 85);
+            this.btnDel.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnDel.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDel.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
+            this.btnDel.Size = new System.Drawing.Size(118, 49);
             this.btnDel.TabIndex = 1;
             this.btnDel.Text = "Sil";
-            this.btnDel.TextColor = System.Drawing.Color.White;
+            this.btnDel.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // FormListProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 789);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(856, 631);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.dataGridViewProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormListProduct";
             this.Text = "FormListProduct";
             this.Load += new System.EventHandler(this.FormListProduct_Load);
