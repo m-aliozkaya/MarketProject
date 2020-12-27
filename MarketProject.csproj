@@ -50,10 +50,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class.cs" />
-    <Compile Include="Entities\Cashier.cs" />
     <Compile Include="Entities\Employee.cs" />
-    <Compile Include="Entities\HalfManager.cs" />
-    <Compile Include="Entities\Manager.cs" />
     <Compile Include="Entities\Market.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Supplier.cs" />
@@ -68,6 +65,12 @@
     </Compile>
     <Compile Include="Forms\FormAddSupplier.Designer.cs">
       <DependentUpon>FormAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddProductMarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddProductMarket.Designer.cs">
+      <DependentUpon>FormAddProductMarket.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormListEmployee.cs">
       <SubType>Form</SubType>
@@ -136,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddSupplier.resx">
       <DependentUpon>FormAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddProductMarket.resx">
+      <DependentUpon>FormAddProductMarket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormListEmployee.resx">
       <DependentUpon>FormListEmployee.cs</DependentUpon>

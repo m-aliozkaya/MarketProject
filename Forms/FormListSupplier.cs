@@ -13,7 +13,7 @@ namespace MarketProject.Forms
 {
     public partial class FormListSupplier : Form
     {
-        List<Supplier> supplierList = new List<Supplier>();
+        BindingList<Supplier> supplierList = new BindingList<Supplier>();
         public FormListSupplier()
         {
             InitializeComponent();
@@ -24,6 +24,25 @@ namespace MarketProject.Forms
             supplierList = SupplierManager.getSuppliers();
 
             dataSupplier.DataSource = supplierList;
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataSupplier.SelectedRows)
+            {
+                SupplierManager.deleteSupplier((int)row.Cells["supplierID"].Value);
+
+                dataSupplier.Rows.Remove(row);
+
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            foreach (Supplier supplier in supplierList)
+            {
+                SupplierManager.updateSupplier(supplier);
+            }
         }
     }
 }

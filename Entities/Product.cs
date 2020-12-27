@@ -11,26 +11,51 @@ namespace MarketProject
         public int productID { get; set; }
         public string productName { get; set; }
         public double productPrice { get; set; }
+        public double indirimOrani { get; set; }
+
+        public int stokDurumu { get; set; }
+
         public Supplier supplier { get; set; }
-        public Market market { get; set; }
+
+        public Product(string productName, double productPrice, Supplier supplier)
+        {
+            this.productName = productName;
+            this.productPrice = productPrice;
+            this.supplier = supplier;
+        }
+
+        public Product(int productID,int stokDurumu, string productName, double productPrice, double indirimOrani)
+        {
+            this.productID = productID;
+            this.stokDurumu = stokDurumu;
+            this.productName = productName;
+            this.productPrice = productPrice; 
+            this.indirimOrani = indirimOrani;
+
+        }        
+        
+        public Product(int productID, string productName, double productPrice,Supplier supplier)
+        {
+            this.productID = productID;
+            this.productName = productName;
+            this.productPrice = productPrice; 
+            this.supplier = supplier;
+
+        }
 
         public Product(int productID, string productName, double productPrice)
         {
             this.productID = productID;
             this.productName = productName;
             this.productPrice = productPrice;
+
         }
 
-        public Product(string productName, double productPrice, Market market)
-        {
-            this.productName = productName;
-            this.productPrice = productPrice;
-            this.market = market;
-        }
+
 
         public override string ToString()
         {
-            return $"{this.productName,-20} {this.productPrice,20} :Price";
+            return $"{this.productName}";
         }
     }
 }

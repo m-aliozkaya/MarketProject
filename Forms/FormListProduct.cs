@@ -12,7 +12,7 @@ namespace MarketProject.Forms
 {
     public partial class FormListProduct : Form
     {
-        private List<Product> productList;
+        private BindingList<Product> productList;
 
         public FormListProduct()
         {
@@ -21,12 +21,32 @@ namespace MarketProject.Forms
 
         private void FormListProduct_Load(object sender, EventArgs e)
         {
-            productList = ProductManager.selectProducts();
+            productList = ProductManager.getProducts();
 
             dataGridViewProduct.DataSource = productList;
+            dataGridViewProduct.Columns["productID"].Visible = false;
+            dataGridViewProduct.Columns["stokDurumu"].Visible = false;
+            dataGridViewProduct.Columns["supplier"].ReadOnly = true;
 
         }
 
-        
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewProduct.SelectedRows)
+            {
+                ProductManager.deleteProduct((int)row.Cells["productID"].Value);
+
+                dataGridViewProduct.Rows.Remove(row);
+
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            foreach (Product product in productList)
+            {
+                ProductManager.updateProduct(product);
+            }
+        }
     }
 }

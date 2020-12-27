@@ -34,8 +34,8 @@ namespace MarketProject.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataSupplier = new System.Windows.Forms.DataGridView();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            this.btnDel = new ePOSOne.btnProduct.Button_WOC();
+            this.btnSave = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.dataSupplier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@ namespace MarketProject.Forms
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataSupplier.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataSupplier.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataSupplier.Location = new System.Drawing.Point(0, 0);
+            this.dataSupplier.Location = new System.Drawing.Point(152, 55);
             this.dataSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataSupplier.Name = "dataSupplier";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -81,46 +81,52 @@ namespace MarketProject.Forms
             this.dataSupplier.RowHeadersWidth = 30;
             this.dataSupplier.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataSupplier.RowTemplate.Height = 28;
-            this.dataSupplier.Size = new System.Drawing.Size(856, 556);
+            this.dataSupplier.Size = new System.Drawing.Size(690, 543);
             this.dataSupplier.TabIndex = 0;
             // 
-            // button_WOC1
+            // btnDel
             // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Silver;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.Red;
-            this.button_WOC1.Location = new System.Drawing.Point(690, 580);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.button_WOC1.Size = new System.Drawing.Size(88, 39);
-            this.button_WOC1.TabIndex = 1;
-            this.button_WOC1.Text = "Kaydet";
-            this.button_WOC1.TextColor = System.Drawing.Color.White;
-            this.button_WOC1.UseVisualStyleBackColor = true;
+            this.btnDel.BorderColor = System.Drawing.Color.Silver;
+            this.btnDel.ButtonColor = System.Drawing.Color.Red;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDel.Location = new System.Drawing.Point(240, 649);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnDel.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnDel.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnDel.Size = new System.Drawing.Size(168, 69);
+            this.btnDel.TabIndex = 2;
+            this.btnDel.Text = "Sil";
+            this.btnDel.TextColor = System.Drawing.Color.White;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // button_WOC2
+            // btnSave
             // 
-            this.button_WOC2.BorderColor = System.Drawing.Color.Silver;
-            this.button_WOC2.ButtonColor = System.Drawing.Color.Red;
-            this.button_WOC2.Location = new System.Drawing.Point(70, 580);
-            this.button_WOC2.Name = "button_WOC2";
-            this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.button_WOC2.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.button_WOC2.Size = new System.Drawing.Size(88, 39);
-            this.button_WOC2.TabIndex = 2;
-            this.button_WOC2.Text = "Sil";
-            this.button_WOC2.TextColor = System.Drawing.Color.White;
-            this.button_WOC2.UseVisualStyleBackColor = true;
+            this.btnSave.BorderColor = System.Drawing.Color.Silver;
+            this.btnSave.ButtonColor = System.Drawing.Color.Red;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSave.Location = new System.Drawing.Point(598, 649);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSave.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSave.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSave.Size = new System.Drawing.Size(173, 70);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Kaydet";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FormListSupplier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 631);
-            this.Controls.Add(this.button_WOC2);
-            this.Controls.Add(this.button_WOC1);
+            this.ClientSize = new System.Drawing.Size(963, 789);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dataSupplier);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -135,7 +141,7 @@ namespace MarketProject.Forms
         #endregion
 
         private System.Windows.Forms.DataGridView dataSupplier;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
-        private ePOSOne.btnProduct.Button_WOC button_WOC2;
+        private ePOSOne.btnProduct.Button_WOC btnSave;
+        private ePOSOne.btnProduct.Button_WOC btnDel;
     }
 }

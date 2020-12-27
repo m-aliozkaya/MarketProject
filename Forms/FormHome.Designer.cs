@@ -77,7 +77,7 @@ namespace MarketProject
             this.panel1.Location = new System.Drawing.Point(-1, -5);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 797);
+            this.panel1.Size = new System.Drawing.Size(413, 800);
             this.panel1.TabIndex = 0;
             // 
             // label12
@@ -231,7 +231,7 @@ namespace MarketProject
             this.panel2.Location = new System.Drawing.Point(410, -1);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(963, 789);
+            this.panel2.Size = new System.Drawing.Size(963, 792);
             this.panel2.TabIndex = 1;
             // 
             // FormHome

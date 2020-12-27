@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarketProject.Managers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace MarketProject.Forms
 {
     public partial class FormAddProduct : Form
     {
-        private List<Market> marketList;
+        private BindingList<Supplier> supplierList;
 
         public FormAddProduct()
         {
@@ -22,11 +23,11 @@ namespace MarketProject.Forms
 
         private void FormAddProduct_Load(object sender, EventArgs e)
         {
-            marketList = MarketManager.GetMarkets();
+            supplierList = SupplierManager.getSuppliers();
 
-            foreach (Market market in marketList)
+            foreach (Supplier supplier in supplierList)
             {
-                cmbBoxMarket.Items.Add(market.marketName);
+                cmbBoxSupplier.Items.Add(supplier.supplierName);
             }
         }
 
@@ -36,13 +37,13 @@ namespace MarketProject.Forms
            
             string productName = txtproductName.Text;
             double productPrice = Convert.ToDouble(txtproductPrice.Text);
-            Market market = marketList[cmbBoxMarket.SelectedIndex];
+            Supplier supplier = supplierList[cmbBoxSupplier.SelectedIndex];
 
             // kraicim ID yi halleder
-            Product product = new Product(productName,productPrice, market);
+            Product product = new Product(productName,productPrice, supplier);
 
-            ProductManager.addProduct(product, market);
-           
+            ProductManager.addProduct(product);
+
         }
 
         private void cmbBoxMarket_SelectedIndexChanged(object sender, EventArgs e)

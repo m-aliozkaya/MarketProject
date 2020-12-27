@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace MarketProject
 {
@@ -7,8 +8,8 @@ namespace MarketProject
         public int marketID { get; set; }
         public string marketName { get; set; }
         public string marketAdress { get; set; }
-        public List<Employee> employeeList { get; set; }
-        public List<Product> productList { get; set; }
+        public BindingList<Employee> employeeList { get; set; }
+        public BindingList<Product> productList { get; set; }
 
         public Market(int marketId, string marketName, string marketAdress)
         {
@@ -23,9 +24,14 @@ namespace MarketProject
             this.marketAdress = marketAdress;
         }
 
+        public Market(string marketName)
+        {
+            this.marketName = marketName;
+        }
+
         public override string ToString()
         {
-            return $"{this.marketName, -20} {this.marketAdress, 20} :Adres";
+            return $"{this.marketName} || {this.marketAdress}";
         }
     }
 }

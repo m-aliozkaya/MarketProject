@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 
 namespace MarketProject
@@ -7,18 +8,34 @@ namespace MarketProject
     // Product database operations
     class ProductManager
     {
-        private static string tableName = "Product";
+        private static string tableNameStock = "ProductStock";
+        private static string tableNameProduct = "Product";
+        private static string tableNameSupplier = "Supplier";
+        private static string supplierNameColumn = "supplierName";
         private static string nameColumn = "productName";
+        private static string idColumn = "productID";
+        private static string stockColumn = "stokDurumu";
         private static string priceColumn = "productPrice";
+        private static string indirimColumn = "indirimYuzdesi";
         private static string marketColumn = "marketID";
+        private static string supplierColumn = "supplierID";
 
-        public static List<Product> selectProducts(Market selectedMarket)
+        public static BindingList<Product> getProducts(Market selectedMarket)
         {
-            List<Product> productList = new List<Product>();
+            BindingList<Product> productList = new BindingList<Product>();
 
             using (SqlConnection connection = Database.getConnection())
             {
-                string query = $"SELECT * from {tableName} where marketID = {selectedMarket.marketID}";
+                string query = $"SELECT {tableNameStock}.{stockColumn}" +
+                    $", {tableNameProduct}.{nameColumn}" +
+                    $", {tableNameProduct}.{priceColumn} " +
+                    $", {tableNameProduct}.{idColumn} " +
+                    $", {tableNameStock}.{indirimColumn} " +
+                    $", {tableNameStock}.{stockColumn} " +
+                    $"from {tableNameStock} inner join {tableNameProduct} " +
+                    $"on {tableNameProduct}.{idColumn} = {tableNameStock}.{idColumn} " +
+                    $"where marketID = {selectedMarket.marketID}";
+
                 SqlCommand command = new SqlCommand(query, connection);
 
                 try
@@ -31,9 +48,11 @@ namespace MarketProject
                         while (dr.Read())
                         {
                             Product product = new Product(
-                               (int)dr["productID"]
+                                (int)dr["productID"],
+                               (int)dr["stokDurumu"]
                                 , (string)dr["productName"]
                                 , (double)dr["productPrice"]
+                                , (double)dr["indirimYuzdesi"]
                                 );
                             productList.Add(product);
                         }
@@ -56,13 +75,21 @@ namespace MarketProject
             }
         }
 
-        public static List<Product> selectProducts()
+        public static BindingList<Product> getProducts()
         {
-            List<Product> productList = new List<Product>();
+            BindingList<Product> productList = new BindingList<Product>();
 
             using (SqlConnection connection = Database.getConnection())
             {
-                string query = $"SELECT * from {tableName}";
+                string query = $"SELECT " +
+                  $" {tableNameProduct}.{nameColumn}" +
+                  $", {tableNameProduct}.{priceColumn} " +
+                  $", {tableNameProduct}.{idColumn} " +
+                  $", {tableNameSupplier}.{supplierNameColumn} " +
+                  $"from {tableNameProduct} " +
+                  $"inner join {tableNameSupplier} " +
+                  $"on {tableNameProduct}.{supplierColumn} = {tableNameSupplier}.{supplierColumn} ";
+
                 SqlCommand command = new SqlCommand(query, connection);
 
                 try
@@ -75,10 +102,12 @@ namespace MarketProject
                         while (dr.Read())
                         {
                             Product product = new Product(
-                               (int)dr["productID"]
-                                , (string)dr["productName"]
-                                , (double)dr["productPrice"]
-                                );
+                                (int)dr["productID"],
+                                (string)dr["productName"],
+                                (double)dr["productPrice"],
+                                new Supplier((string)dr["supplierName"])
+
+                                ); ;
                             productList.Add(product);
                         }
 
@@ -100,11 +129,111 @@ namespace MarketProject
             }
         }
 
-        public static void addProduct(Product product, Market market)
+        public static void addProduct(Product product)
         {
             using (SqlConnection connection = Database.getConnection())
             {
-                string query = $"INSERT into {tableName}({nameColumn}, {priceColumn}, {marketColumn}) Values('{product.productName}', {product.productPrice}, {market.marketID})";
+                string query = $"INSERT into {tableNameProduct}({nameColumn}, {priceColumn}, {supplierColumn}) Values('{product.productName}', {product.productPrice}, {product.supplier.supplierID})";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public static void addProductStock(Product product, Market market, int stok)
+        {
+            using (SqlConnection connection = Database.getConnection())
+            {
+                string query = $"INSERT into {tableNameStock}({idColumn}, {marketColumn}, {stockColumn}) Values('{product.productID}', {market.marketID}, {stok})";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public static void deleteProduct(int productID)
+        {
+            using (SqlConnection connection = Database.getConnection())
+            {
+                string query = $"Delete from {tableNameProduct} where {idColumn} = {productID}";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public static void updateProduct(Product product)
+        {
+            using (SqlConnection connection = Database.getConnection())
+            {
+                string query = $"UPDATE {tableNameProduct} SET {nameColumn} = '{product.productName}', {priceColumn} = '{product.productPrice}' where {idColumn} = {product.productID}";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public static void updateProductStok(Product product, Market market)
+        {
+            using (SqlConnection connection = Database.getConnection())
+            {
+                string query = $"UPDATE {tableNameStock} SET " +
+                    $"{stockColumn} = '{product.stokDurumu}'" +
+                    $", {indirimColumn} = '{product.indirimOrani}' " +
+                    $"where {idColumn} = {product.productID} and {marketColumn}={market.marketID}";
+                
                 SqlCommand command = new SqlCommand(query, connection);
 
                 try

@@ -12,7 +12,7 @@ namespace MarketProject.Forms
 {
     public partial class FormAddEmployee : Form
     {
-        private List<Market> marketList;
+        private BindingList<Market> marketList;
         public FormAddEmployee()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace MarketProject.Forms
 
         private void FormAddEmployee_Load(object sender, EventArgs e)
         {
-            marketList = MarketManager.GetMarkets();
+            marketList = MarketManager.getMarkets();
 
             foreach (Market market in marketList)
             {
@@ -33,11 +33,24 @@ namespace MarketProject.Forms
            string employeeName = txtName.Text;
            string employeeAdress = txtAdres.Text;
            double employeeSalary = Convert.ToDouble(txtSalary.Text);
+           string employeePosition = cmbPozisyon.Text;
+           string employeeHoliday = cmbBoxHoliday.Text;
+           Market market = (Market) cmbMarket.SelectedItem;
 
+           Employee employee = new Employee(
+               employeeName
+               ,employeeAdress
+               ,employeeSalary
+               ,market
+               ,employeePosition
+               ,employeeHoliday);
 
-           EmployeeManager.addEmployee(
-               new Employee(employeeName, employeeAdress, employeeSalary, marketList[cmbMarket.SelectedIndex]) 
-               ); 
+           EmployeeManager.addEmployee(employee);
+        }
+
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

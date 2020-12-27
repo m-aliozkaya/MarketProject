@@ -20,7 +20,7 @@ namespace MarketProject
 
         private void FormAddList_Load(object sender, EventArgs e)
         {
-            List<Product> products = ProductManager.selectProducts();
+            BindingList<Product> products = ProductManager.getProducts();
 
             foreach (Product product in products)
             {
@@ -33,20 +33,22 @@ namespace MarketProject
         {
             string marketName = txtMarketName.Text;
             string marketAdress = txtMarketAdres.Text;
+            string[] stoklar = richTextBox1.Lines;
 
             Market market = new Market(marketName, marketAdress);
 
             market.marketID = MarketManager.addMarket(market);
+            int i = 0;
 
             foreach (Product product in checkListProducts.CheckedItems)
             {
-                ProductManager.addProduct(product, market);
+                ProductManager.addProductStock(product, market, Convert.ToInt32(stoklar[i++]));
             }
+
+       
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
+ 
     }
 }

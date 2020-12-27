@@ -36,8 +36,11 @@ namespace MarketProject
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataProduct = new System.Windows.Forms.DataGridView();
-            this.dataEmployee = new System.Windows.Forms.DataGridView();
             this.cmbBoxMarkets = new System.Windows.Forms.ComboBox();
+            this.btnSave = new ePOSOne.btnProduct.Button_WOC();
+            this.btnEdit = new ePOSOne.btnProduct.Button_WOC();
+            this.btnDel = new ePOSOne.btnProduct.Button_WOC();
+            this.dataEmployee = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmployee)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +71,7 @@ namespace MarketProject
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataProduct.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataProduct.Location = new System.Drawing.Point(22, 71);
+            this.dataProduct.Location = new System.Drawing.Point(79, 129);
             this.dataProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataProduct.Name = "dataProduct";
             this.dataProduct.RowHeadersWidth = 30;
@@ -76,8 +79,74 @@ namespace MarketProject
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dataProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataProduct.RowTemplate.Height = 28;
-            this.dataProduct.Size = new System.Drawing.Size(748, 234);
+            this.dataProduct.Size = new System.Drawing.Size(704, 210);
             this.dataProduct.TabIndex = 0;
+            // 
+            // cmbBoxMarkets
+            // 
+            this.cmbBoxMarkets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbBoxMarkets.FormattingEnabled = true;
+            this.cmbBoxMarkets.Location = new System.Drawing.Point(67, 54);
+            this.cmbBoxMarkets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbBoxMarkets.Name = "cmbBoxMarkets";
+            this.cmbBoxMarkets.Size = new System.Drawing.Size(560, 37);
+            this.cmbBoxMarkets.TabIndex = 2;
+            this.cmbBoxMarkets.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMarkets_SelectedIndexChanged);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BorderColor = System.Drawing.Color.Silver;
+            this.btnSave.ButtonColor = System.Drawing.Color.Red;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSave.Location = new System.Drawing.Point(680, 98);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSave.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSave.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSave.Size = new System.Drawing.Size(240, 50);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Değişiklikleri Kaydet";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BorderColor = System.Drawing.Color.Silver;
+            this.btnEdit.ButtonColor = System.Drawing.Color.Red;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEdit.Location = new System.Drawing.Point(794, 24);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnEdit.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnEdit.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnEdit.Size = new System.Drawing.Size(126, 50);
+            this.btnEdit.TabIndex = 5;
+            this.btnEdit.Text = "Ürün Ekle";
+            this.btnEdit.TextColor = System.Drawing.Color.White;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.BorderColor = System.Drawing.Color.Silver;
+            this.btnDel.ButtonColor = System.Drawing.Color.Red;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDel.Location = new System.Drawing.Point(680, 24);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnDel.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnDel.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnDel.Size = new System.Drawing.Size(84, 48);
+            this.btnDel.TabIndex = 4;
+            this.btnDel.Text = "Sil";
+            this.btnDel.TextColor = System.Drawing.Color.White;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // dataEmployee
             // 
@@ -85,58 +154,47 @@ namespace MarketProject
             this.dataEmployee.AllowUserToDeleteRows = false;
             this.dataEmployee.AllowUserToResizeColumns = false;
             this.dataEmployee.AllowUserToResizeRows = false;
-            this.dataEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataEmployee.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataEmployee.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataEmployee.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataEmployee.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataEmployee.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataEmployee.Location = new System.Drawing.Point(22, 321);
-            this.dataEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataEmployee.Location = new System.Drawing.Point(113, 321);
+            this.dataEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataEmployee.Name = "dataEmployee";
             this.dataEmployee.RowHeadersWidth = 30;
             this.dataEmployee.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            this.dataEmployee.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataEmployee.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            this.dataEmployee.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dataEmployee.RowTemplate.Height = 28;
-            this.dataEmployee.Size = new System.Drawing.Size(748, 290);
-            this.dataEmployee.TabIndex = 1;
-            // 
-            // cmbBoxMarkets
-            // 
-            this.cmbBoxMarkets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbBoxMarkets.FormattingEnabled = true;
-            this.cmbBoxMarkets.Location = new System.Drawing.Point(22, 19);
-            this.cmbBoxMarkets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbBoxMarkets.Name = "cmbBoxMarkets";
-            this.cmbBoxMarkets.Size = new System.Drawing.Size(792, 33);
-            this.cmbBoxMarkets.TabIndex = 2;
-            this.cmbBoxMarkets.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMarkets_SelectedIndexChanged);
+            this.dataEmployee.RowTemplate.Height = 24;
+            this.dataEmployee.Size = new System.Drawing.Size(719, 439);
+            this.dataEmployee.TabIndex = 8;
             // 
             // FormListMarket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 631);
-            this.Controls.Add(this.cmbBoxMarkets);
+            this.ClientSize = new System.Drawing.Size(963, 789);
             this.Controls.Add(this.dataEmployee);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.cmbBoxMarkets);
             this.Controls.Add(this.dataProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -152,7 +210,10 @@ namespace MarketProject
         #endregion
 
         private System.Windows.Forms.DataGridView dataProduct;
-        private System.Windows.Forms.DataGridView dataEmployee;
         private System.Windows.Forms.ComboBox cmbBoxMarkets;
+        private ePOSOne.btnProduct.Button_WOC btnDel;
+        private ePOSOne.btnProduct.Button_WOC btnEdit;
+        private ePOSOne.btnProduct.Button_WOC btnSave;
+        private System.Windows.Forms.DataGridView dataEmployee;
     }
 }

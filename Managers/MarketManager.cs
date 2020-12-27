@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 
 namespace MarketProject
@@ -10,10 +10,11 @@ namespace MarketProject
        private static string tableName = "Market";
        private static string nameColumn = "marketName";
        private static  string adresColumn = "marketAdres";
+       private static  string idColumn = "marketID";
 
-        public static List<Market> GetMarkets()
+        public static BindingList<Market> getMarkets()
         {
-            List<Market> marketList = new List<Market>();
+            BindingList<Market> marketList = new BindingList<Market>();
 
             using (SqlConnection connection = Database.getConnection())
             {
@@ -81,6 +82,54 @@ namespace MarketProject
 
             }
 
+        }
+
+        public static void deleteMarket(int marketId)
+        {
+            using (SqlConnection connection = Database.getConnection())
+            {
+                string query = $"Delete from {tableName} where {idColumn} = {marketId}";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public static void updateMarket(Market market)
+        {
+            using (SqlConnection connection = Database.getConnection())
+            {
+                string query = $"UPDATE {tableName} SET {nameColumn} = '{market.marketName}', {adresColumn} = '{market.marketAdress}' where {idColumn} = {market.marketID}";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
         }
 
 
