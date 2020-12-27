@@ -92,21 +92,36 @@ namespace MarketProject
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            BindingList<Product> productDb = ProductManager.getProducts(selectedMarket);
+
+            int i = 0;
+
             foreach (Product product in selectedMarket.productList)
             {
-                ProductManager.updateProductStok(product, selectedMarket);
+                if (selectedMarket.productList[i].indirimOrani != productDb[i].indirimOrani)
+                {
+                    ProductManager.updateProductWithIndirim(selectedMarket.productList[i], selectedMarket);
+                    selectedMarket.productList[i].indirimTarihi = DateTime.Now.Date;
+                    selectedMarket.productList.ResetBindings();
+            }
+                else
+                {
+                    ProductManager.updateProductStok(product, selectedMarket);
+                }
+                i++;
             }
 
             BindingList<Employee> employeeDb = EmployeeManager.getEmployees();
 
-            int i = 0;
+            int x = 0;
 
             foreach (Employee employee in selectedMarket.employeeList)
             {
-                if (employee.employeeSalary <employeeDb[i].employeeSalary)
+                if (employee.employeeSalary <employeeDb[x].employeeSalary)
                 {
                     MessageBox.Show("Çalışanın maaşı öncekinden küçük olamaz!");
-                    employee.employeeSalary = employeeDb[i].employeeSalary;
+                    employee.employeeSalary = employeeDb[x].employeeSalary;
                     selectedMarket.employeeList.ResetBindings();
                 } else
                 {

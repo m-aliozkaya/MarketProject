@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace MarketProject
 {
@@ -19,6 +20,8 @@ namespace MarketProject
         private static string indirimColumn = "indirimYuzdesi";
         private static string marketColumn = "marketID";
         private static string supplierColumn = "supplierID";
+        private static string dateColumn = "indirimTarihi";
+
 
         public static BindingList<Product> getProducts(Market selectedMarket)
         {
@@ -32,6 +35,7 @@ namespace MarketProject
                     $", {tableNameProduct}.{idColumn} " +
                     $", {tableNameStock}.{indirimColumn} " +
                     $", {tableNameStock}.{stockColumn} " +
+                    $", {tableNameStock}.{dateColumn} " +
                     $"from {tableNameStock} inner join {tableNameProduct} " +
                     $"on {tableNameProduct}.{idColumn} = {tableNameStock}.{idColumn} " +
                     $"where marketID = {selectedMarket.marketID}";
@@ -47,12 +51,21 @@ namespace MarketProject
                     {
                         while (dr.Read())
                         {
+                            DateTime date = DateTime.MinValue;
+
+                            if (dr["indirimTarihi"] != DBNull.Value)
+                            {
+                                date = (DateTime)dr["indirimTarihi"];
+                            }
+
+
                             Product product = new Product(
                                 (int)dr["productID"],
                                (int)dr["stokDurumu"]
                                 , (string)dr["productName"]
                                 , (double)dr["productPrice"]
-                                , (double)dr["indirimYuzdesi"]
+                                , (int)dr["indirimYuzdesi"]
+                                , date
                                 );
                             productList.Add(product);
                         }
@@ -205,7 +218,38 @@ namespace MarketProject
         {
             using (SqlConnection connection = Database.getConnection())
             {
-                string query = $"UPDATE {tableNameProduct} SET {nameColumn} = '{product.productName}', {priceColumn} = '{product.productPrice}' where {idColumn} = {product.productID}";
+                string query = $"UPDATE {tableNameProduct} SET " +
+                    $"{nameColumn} = '{product.productName}'" +
+                    $", {priceColumn} = '{product.productPrice}' " +
+                    $"where {idColumn} = {product.productID}";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public static void updateProductWithIndirim(Product product, Market market)
+        {
+            using (SqlConnection connection = Database.getConnection())
+            {
+
+                string query = $"UPDATE {tableNameStock} SET " +
+                    $" {dateColumn} = '{DateTime.Now.Date.ToString("yyyy-MM-dd")}' " +
+                    $", {indirimColumn} = '{product.indirimOrani}' " +
+                    $"where {idColumn} = {product.productID} and {marketColumn}={market.marketID}";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 try
@@ -231,7 +275,6 @@ namespace MarketProject
             {
                 string query = $"UPDATE {tableNameStock} SET " +
                     $"{stockColumn} = '{product.stokDurumu}'" +
-                    $", {indirimColumn} = '{product.indirimOrani}' " +
                     $"where {idColumn} = {product.productID} and {marketColumn}={market.marketID}";
                 
                 SqlCommand command = new SqlCommand(query, connection);

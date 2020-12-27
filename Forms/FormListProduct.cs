@@ -27,6 +27,8 @@ namespace MarketProject.Forms
             dataGridViewProduct.Columns["productID"].Visible = false;
             dataGridViewProduct.Columns["stokDurumu"].Visible = false;
             dataGridViewProduct.Columns["supplier"].ReadOnly = true;
+            dataGridViewProduct.Columns["indirimOrani"].Visible = false;
+            dataGridViewProduct.Columns["indirimTarihi"].Visible = false;
 
         }
 
@@ -45,7 +47,9 @@ namespace MarketProject.Forms
         {
             foreach (Product product in productList)
             {
-                ProductManager.updateProduct(product);
+                
+                    ProductManager.updateProduct(product);
+                
             }
         }
 
